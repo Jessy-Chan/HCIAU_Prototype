@@ -1,6 +1,11 @@
 export const research = {
   publications: {
-    featured: [
+    title: "Publikasi Penyelidikan",
+    searchplaceholder: "Cari publikasi...",
+    bytext: "Oleh",
+    downloadtext: "Muat Turun PDF",
+    categories: ["Seni Kontemporari", "Seni Tradisional", "Sejarah Seni", "Pemuliharaan"],
+    items: [
       {
         id: "pub001",
         title: "Seni Malaysia dalam Milenium Baharu",
@@ -8,9 +13,16 @@ export const research = {
         date: "2023",
         abstract: "Kajian menyeluruh tentang tren seni kontemporari Malaysia",
         downloadUrl: "/publications/malaysian-art-2023.pdf"
+      },
+      {
+        id: "pub002",
+        title: "Pergerakan Seni Kontemporari di Asia Tenggara",
+        author: "Dr. John Smith",
+        date: "2023",
+        abstract: "Analisis pergerakan seni baharu di rantau ini",
+        downloadUrl: "/publications/sea-art-2023.pdf"
       }
-    ],
-    categories: ["Seni Kontemporari", "Seni Tradisional", "Sejarah Seni", "Pemuliharaan"]
+    ]
   },
 
   archive: {
@@ -72,6 +84,8 @@ export const research = {
     description: "Koleksi data terbuka yang berkaitan dengan seni dan budaya",
     viewtext: "Lihat Data",
     downloadtext: "Muat Turun Data",
+    updatetext: "Dikemas kini pada ",
+    formattext: "Format: ",
     datasets: [
       {
         id: "data001",
@@ -123,6 +137,35 @@ export const research = {
       phone: "+603-4026 7000",
       hours: "Isnin-Jumaat, 9:00 PG - 5:00 PTG"
     }
+  },
+
+  downloads: {
+    title: "Borang-Borang Muat Turun",
+    categorytext: "Semua Kategori",
+    categories: ["Pendaftaran Artis", "Hak Cipta", "Umum"],
+    downloadtext: "Muat Turun",
+    sizetext: "Saiz",
+    formattext: "Format",
+    forms: [
+      {
+        id: "form002",
+        title: "Borang Pendaftaran Artis",
+        description: "Borang permohonan untuk pendaftaran artis dengan NVADB",
+        category: "Pendaftaran Artis",
+        format: "PDF",
+        size: "150KB",
+        downloadUrl: "/forms/artist-registration.pdf"
+      },
+      {
+        id: "form003",
+        title: "Pendaftaran Hak Cipta Karya Seni",
+        description: "Borang untuk mendaftar hak cipta karya seni anda",
+        category: "Hak Cipta",
+        format: "PDF",
+        size: "200KB",
+        downloadUrl: "/forms/copyright-registration.pdf"
+      }
+    ]
   }
 };
 

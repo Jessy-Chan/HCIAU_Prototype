@@ -86,7 +86,6 @@ export const ms = {
             { title: 'Arkib', path: '/research/archive' },
             { title: 'Muat Turun', path: '/research/downloads' },
             { title: 'Data Terbuka', path: '/research/open-data' },
-            { title: 'Pautan', path: '/research/links' },
             { title: 'Soalan Lazim', path: '/research/faq' },
             { title: 'Bantuan', path: '/research/help' }
           ]

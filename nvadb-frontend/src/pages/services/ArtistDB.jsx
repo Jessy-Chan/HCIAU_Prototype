@@ -43,9 +43,9 @@ const ArtistDB = () => {
           <input
             type="search"
             placeholder="Search artists..."
-            className="w-full p-3 border rounded-lg"
+            className="w-full p-3 border rounded-lg bg-gray-100"
           />
-          <select className="w-full p-3 border rounded-lg">
+          <select className="w-full p-3 border rounded-lg bg-gray-200">
             {artistDatabase.searchFields.map((field) => (
               <option key={field} value={field}>
                 Search by {field}

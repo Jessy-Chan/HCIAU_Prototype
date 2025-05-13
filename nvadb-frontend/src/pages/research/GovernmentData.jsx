@@ -19,10 +19,10 @@ const GovernmentData = () => {
               <p className="text-sm text-gray-600 mt-1">{dataset.description}</p>
               <div className="flex gap-2 mt-2">
                 <span className="text-xs bg-gray-100 px-2 py-1 rounded">
-                  Updated: {dataset.lastUpdated}
+                  {opendata.updatetext}{dataset.lastUpdated}
                 </span>
                 <span className="text-xs bg-gray-100 px-2 py-1 rounded">
-                  Format: {dataset.format}
+                  {opendata.formattext}{dataset.format}
                 </span>
               </div>
               <div className="mt-4 flex gap-2">

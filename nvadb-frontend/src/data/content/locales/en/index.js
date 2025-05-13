@@ -86,7 +86,6 @@ export const en = {
             { title: 'Archive', path: '/research/archive' },
             { title: 'Downloads', path: '/research/downloads' },
             { title: 'Open Data', path: '/research/open-data' },
-            { title: 'Links', path: '/research/links' },
             { title: 'FAQ', path: '/research/faq' },
             { title: 'Help', path: '/research/help' }
           ]

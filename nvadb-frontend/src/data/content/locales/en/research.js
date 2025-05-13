@@ -1,6 +1,11 @@
 export const research = {
   publications: {
-    featured: [
+    title: "Research Publications",
+    searchplaceholder: "Search publications...",
+    bytext: "By",
+    downloadtext: "Download PDF",
+    categories: ["Contemporary Art", "Traditional Art", "Art History", "Conservation"],
+    items: [
       {
         id: "pub001",
         title: "Malaysian Art in the New Millennium",
@@ -8,10 +13,18 @@ export const research = {
         date: "2023",
         abstract: "A comprehensive study of contemporary Malaysian art trends",
         downloadUrl: "/publications/malaysian-art-2023.pdf"
+      },
+      {
+        id: "pub002",
+        title: "Contemporary Art Movements in Southeast Asia",
+        author: "Dr. John Smith",
+        date: "2023",
+        abstract: "Analysis of emerging art movements in the region",
+        downloadUrl: "/publications/sea-art-2023.pdf"
       }
-    ],
-    categories: ["Contemporary Art", "Traditional Art", "Art History", "Conservation"]
+    ]
   },
+  
   archive: {
     title: "NVADB Archive",
     yeartext: "All Year",
@@ -64,11 +77,14 @@ export const research = {
       }
     ]
   },
+
   opendata: {
     title: "Goverment Open Data",
     description: "Access and download datasets related to Malaysian art and culture.",
     viewtext: "View Data",
     downloadtext: "Download Data",
+    updatetext:"Updated: ",
+    formattext: "Format: ",
     datasets: [
       {
         id: "data001",
@@ -80,6 +96,7 @@ export const research = {
       }
     ]
   },
+
   faq: {
     title: "Frequently Asked Questions",
     searchplaceholder: "Search FAQs...",
@@ -119,6 +136,34 @@ export const research = {
       phone: "+603-4026 7000",
       hours: "Monday-Friday, 9:00 AM - 5:00 PM"
     }
+  },
+  downloads: {
+    title: "Downloadable Forms",
+    categorytext: "All Categories",
+    categories: ["Artist Registration", "Copyright", "General"],
+    downloadtext: "Download",
+    sizetext: "Size",
+    formattext: "Format",
+    forms: [
+      {
+        id: "form002",
+        title: "Artist Registration Form",
+        description: "Application form for artist registration with NVADB",
+        category: "Artist Registration",
+        format: "PDF",
+        size: "150KB",
+        downloadUrl: "/forms/artist-registration.pdf"
+      },
+      {
+        id: "form003",
+        title: "Artwork Copyright Registration",
+        description: "Form to register copyright for your artistic works",
+        category: "Copyright",
+        format: "PDF",
+        size: "200KB",
+        downloadUrl: "/forms/copyright-registration.pdf"
+      }
+    ]
   }
 };
 

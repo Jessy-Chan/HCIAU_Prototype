@@ -14,11 +14,11 @@ const Publications = () => {
   );
 
   return (
-    <PageTemplate title="Research Publications">
+    <PageTemplate title={publications.title}>
       <div className="space-y-6">
         <input
           type="search"
-          placeholder="Search publications..."
+          placeholder={publications.searchplaceholder}
           className="w-full p-3 border rounded-lg"
           onChange={(e) => setSearchTerm(e.target.value)}
         />
@@ -29,7 +29,7 @@ const Publications = () => {
               <div className="flex justify-between">
                 <div>
                   <h2 className="text-xl font-semibold">{pub.title}</h2>
-                  <p className="text-gray-600">By {pub.author}</p>
+                  <p className="text-gray-600">{publications.bytext} {pub.author}</p>
                   <p className="text-sm text-gray-500">{pub.date}</p>
                   <p className="mt-2">{pub.abstract}</p>
                 </div>
@@ -37,7 +37,7 @@ const Publications = () => {
                   href={pub.downloadUrl}
                   className="bg-primary text-white px-4 py-2 rounded-lg h-fit"
                 >
-                  Download PDF
+                  {publications.downloadtext}
                 </a>
               </div>
             </Card>

@@ -264,13 +264,6 @@ const router = createBrowserRouter([
             }
           },
           {
-            path: 'links',
-            async lazy() {
-              const { default: Component } = await import('../pages/research/Links');
-              return { Component };
-            }
-          },
-          {
             path: 'faq',
             async lazy() {
               const { default: Component } = await import('../pages/research/FAQ');

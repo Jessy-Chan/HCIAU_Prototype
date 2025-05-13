@@ -20,7 +20,7 @@ const Archive = () => {
         <div className="flex gap-4">
           <select 
             onChange={(e) => setSelectedYear(e.target.value)}
-            className="border rounded-lg p-2"
+            className="border rounded-lg p-2 bg-gray-200"
           >
             <option value="all">{archive.yeartext}</option>
             {archive.years.map(year => (
@@ -30,7 +30,7 @@ const Archive = () => {
 
           <select 
             onChange={(e) => setSelectedType(e.target.value)}
-            className="border rounded-lg p-2"
+            className="border rounded-lg p-2 bg-gray-200"
           >
             <option value="all">{archive.typetext}</option>
             {archive.types.map(type => (
