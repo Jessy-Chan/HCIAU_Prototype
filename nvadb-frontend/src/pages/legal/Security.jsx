@@ -8,11 +8,12 @@ const Security = () => {
   const { security } = content.legal;
 
   return (
-    <PageTemplate title="Security Policy">
+    <PageTemplate title={security.title}>
       <div className="space-y-6">
         <section className="hero-section">
-          <h1>Security Policy</h1>
-          <p className="text-sm text-gray-500">Last Updated: {security.lastUpdated}</p>
+          <h1>{security.title}</h1>
+          <p className="text-lg text-gray-600">{security.securitytext}</p>
+          <p className="text-sm text-gray-500">{security.lastupdatedtext}: {security.lastUpdated}</p>
         </section>
         
         <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
