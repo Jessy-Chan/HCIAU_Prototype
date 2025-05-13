@@ -8,13 +8,13 @@ const Membership = () => {
   const { membership } = content.engage;
 
   return (
-    <PageTemplate title="NAG FRIENDS Membership">
+    <PageTemplate title={membership.title}>
       <div className="space-y-8">
         <div className="grid gap-6 md:grid-cols-2">
           {membership.levels.map((level) => (
             <Card key={level.name}>
               <h2 className="text-xl font-semibold">{level.name}</h2>
-              <p className="text-primary mt-1">{level.annual}/year</p>
+              <p className="text-primary mt-1">{level.annual} / {membership.yeartext}</p>
               <ul className="mt-4 space-y-2">
                 {level.benefits.map((benefit, index) => (
                   <li key={index} className="flex items-center">
@@ -24,7 +24,7 @@ const Membership = () => {
                 ))}
               </ul>
               <button className="mt-6 w-full bg-primary text-white py-2 rounded-lg">
-                Join Now
+                {membership.jointext}
               </button>
             </Card>
           ))}

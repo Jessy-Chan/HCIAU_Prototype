@@ -8,10 +8,10 @@ const ResourceMedia = () => {
   const { resources } = content.engage;
 
   return (
-    <PageTemplate title="Resource and Media">
+    <PageTemplate title={resources.title}>
       <div className="space-y-8">
         <section>
-          <h2 className="text-xl font-semibold mb-4">Digital Resources</h2>
+          <h2 className="text-xl font-semibold mb-4">{resources.digitalresourcestext}</h2>
           <div className="grid gap-4 md:grid-cols-2">
             {resources.digital.map((resource) => (
               <Card key={resource.id}>
@@ -21,7 +21,7 @@ const ResourceMedia = () => {
                   href={resource.url}
                   className="text-primary hover:underline mt-2 inline-block"
                 >
-                  Access Resource →
+                  {resources.accesstext}
                 </a>
               </Card>
             ))}
@@ -29,7 +29,7 @@ const ResourceMedia = () => {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold mb-4">Downloadable Materials</h2>
+          <h2 className="text-xl font-semibold mb-4">{resources.downloadmaterialstext}</h2>
           <div className="grid gap-4 md:grid-cols-3">
             {resources.downloads.map((item) => (
               <Card key={item.id}>
@@ -43,7 +43,7 @@ const ResourceMedia = () => {
                     className="text-primary hover:underline"
                     download
                   >
-                    Download
+                    {resources.downloadtext}
                   </a>
                 </div>
               </Card>

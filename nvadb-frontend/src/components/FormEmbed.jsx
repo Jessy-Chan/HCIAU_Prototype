@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FormEmbed = ({ title, fields, onSubmit }) => {
+const FormEmbed = ({ title, fields, onSubmit, locale }) => {
   return (
     <form onSubmit={onSubmit} className="space-y-4">
       <h2>{title}</h2>
@@ -18,7 +18,7 @@ const FormEmbed = ({ title, fields, onSubmit }) => {
         </div>
       ))}
       <button type="submit" className="btn-primary">
-        Submit
+        {locale === 'ms' ? 'Hantar' : 'Submit'}
       </button>
     </form>
   );

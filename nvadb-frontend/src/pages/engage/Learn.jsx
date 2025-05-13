@@ -8,7 +8,7 @@ const Learn = () => {
   const { learn } = content.engage;
 
   return (
-    <PageTemplate title="Learn & References">
+    <PageTemplate title={learn.title}>
       <div className="grid gap-6 md:grid-cols-2">
         {learn.resources.map((resource, index) => (
           <Card key={index}>
@@ -18,7 +18,7 @@ const Learn = () => {
                 <h2 className="font-semibold mt-1">{resource.title}</h2>
                 {resource.duration && (
                   <span className="text-sm text-gray-500">
-                    Duration: {resource.duration}
+                    {learn.durationtext}: {resource.duration}
                   </span>
                 )}
               </div>
@@ -26,7 +26,7 @@ const Learn = () => {
                 href={resource.url}
                 className="bg-primary text-white px-4 py-2 rounded-lg"
               >
-                View
+                {learn.viewtext}
               </a>
             </div>
           </Card>

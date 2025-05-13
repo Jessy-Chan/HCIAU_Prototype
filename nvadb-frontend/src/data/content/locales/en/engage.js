@@ -1,5 +1,12 @@
 export const engage = {
-  programs: [
+  programs: {
+    title: "Art Development Programmes",
+    programtext: "Our Programs",
+    welcometext: "Welcome to NVADB's Programs page.",
+    scheduletext: "Schedule",
+    agetext: "Age",
+    feetext: "Fee",
+    program: [
     {
       id: "prog001",
       title: "Youth Art Workshop",
@@ -12,7 +19,22 @@ export const engage = {
       }
     }
   ],
+  form:[
+    {
+      id: "form001",
+      title: "Register for Program",
+      name: "Full Name",
+      email: "Email",
+      age: "Age",
+      submit: "Submit",
+    }
+  ]
+},
+
   membership: {
+    title: "NAG FRIENDS Membership",
+    yeartext: "Year",
+    jointext: "Join Now",
     levels: [
       {
         name: "Friend",
@@ -25,13 +47,41 @@ export const engage = {
       }
     ]
   },
+  
   learn: {
+    title: "Learn & References",
+    durationtext: "Duration",
+    viewtext: "View",
     resources: [
       {
         type: "Video",
         title: "Art History Series",
         duration: "45 mins",
         url: "/learn/art-history"
+      }
+    ]
+  },
+
+  resources: {
+    title: "Resources and Media",
+    digitalresourcestext: "Digital Resources",
+    accesstext: "Access Resource →",
+    downloadmaterialstext: "Downloadable Materials",
+    downloadtext: "Download",
+    digital: [
+      {
+        id: "res001",
+        title: "Art History Series",
+        description: "Educational videos about art history",
+        url: "/resources/art-history"
+      }
+    ],
+    downloads: [
+      {
+        id: "dl001",
+        title: "Art Guide 2023",
+        format: "PDF",
+        downloadUrl: "/resources/guide-2023.pdf"
       }
     ]
   }
