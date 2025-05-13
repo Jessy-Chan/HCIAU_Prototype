@@ -93,12 +93,26 @@ export const exhibitions = {
     title: "Galeri Foto",
     pagetitle: "Galeri Foto",
     closetext: "Tutup",
+    previoustext: "Sebelumnya",
+    nexttext: "Seterusnya",
     images: [
       {
         id: "img001",
-        title: "Hadiah Dari ASEAN",
+        title: "Pameran Hadiah dari ASEAN",
         thumbnail: "/images/exhibitions/thumbnails/Poster-Pameran-Portal-NAG_Hadiah-Dari-Asean1.jpg",
-        full: "/images/exhibitions/full/Poster-Pameran-Portal-NAG_Hadiah-Dari-Asean1.jpg",
+        full: [
+          "/images/exhibitions/full/Poster-Pameran-Portal-NAG_Hadiah-Dari-Asean1.jpg",
+          "/images/exhibitions/full/Poster-Pameran-Portal-NAG_Hadiah-Dari-Asean2.png"
+        ],
+        date: "2023-10-01"
+      },
+      {
+        id: "img002",
+        title: "Pameran Projek Arkib Chung Chen Sun",
+        thumbnail: "/images/exhibitions/thumbnails/Pameran-Projek-Arkib-Archive-Project-Chung-Chen-Sun_Banner-Pameran-Portal-LPSVN.jpg",
+        full: [
+          "/images/exhibitions/full/Pameran-Projek-Arkib-Archive-Project-Chung-Chen-Sun_Banner-Pameran-Portal-LPSVN.jpg"
+        ],
         date: "2023-10-01"
       }
     ]

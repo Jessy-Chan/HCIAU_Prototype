@@ -88,15 +88,28 @@ export const exhibitions = {
   photogallery: {
     title: "Photo Gallery",
     closetext: "Close",
+    previoustext: "Previous",
+    nexttext: "Next",
     images: [
       {
         id: "img001",
         title: "A Gift from ASEAN Exhibition",
         thumbnail: "/images/exhibitions/thumbnails/Poster-Pameran-Portal-NAG_Hadiah-Dari-Asean1.jpg",
-        full: "/images/exhibitions/full/Poster-Pameran-Portal-NAG_Hadiah-Dari-Asean1.jpg",
+        full: [
+          "/images/exhibitions/full/Poster-Pameran-Portal-NAG_Hadiah-Dari-Asean1.jpg",
+          "/images/exhibitions/full/Poster-Pameran-Portal-NAG_Hadiah-Dari-Asean2.png"
+        ],
+        date: "2023-10-01"
+      },
+      {
+        id: "img002",
+        title: "Chung Chen Sun Archive Project Exhibition",
+        thumbnail: "/images/exhibitions/thumbnails/Pameran-Projek-Arkib-Archive-Project-Chung-Chen-Sun_Banner-Pameran-Portal-LPSVN.jpg",
+        full: [
+          "/images/exhibitions/full/Pameran-Projek-Arkib-Archive-Project-Chung-Chen-Sun_Banner-Pameran-Portal-LPSVN.jpg"
+        ],
         date: "2023-10-01"
       }
-      // More images...
     ]
   },
   videogallery: {
