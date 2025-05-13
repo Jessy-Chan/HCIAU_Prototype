@@ -1,0 +1,33 @@
+:root {
+  --primary: oklch(0% 0 0);
+  --primary-content: oklch(100% 0 0);
+  --secondary: oklch(82% 0.111 230.318);
+  --secondary-content: oklch(29% 0.066 243.157);
+  --accent: oklch(0% 0 0);
+  --accent-content: oklch(100% 0 0);
+  --neutral: oklch(27% 0.033 256.848);
+  --neutral-content: oklch(98% 0.002 247.839);
+  
+  /* Layout */
+  --header-height: 4rem;
+  --sidebar-width: 16rem;
+  --content-max-width: 1280px;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] {
+  --primary: oklch(13% 0.028 261.692);
+  --primary-content: oklch(96% 0.003 264.542);
+}

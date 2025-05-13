@@ -1,0 +1,74 @@
+@import './variables.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[data-theme="luxury"] {
+  /* ...existing code... */
+}
+
+@layer base {
+  html {
+    @apply text-gray-900 scroll-smooth;
+  }
+  
+  body {
+    @apply text-gray-900 bg-white;
+  }
+  
+  h1 {
+    @apply text-gray-900 text-2xl md:text-3xl lg:text-4xl font-bold mb-4;
+  }
+  
+  h2 {
+    @apply text-gray-900 text-xl md:text-2xl font-semibold mb-3;
+  }
+  
+  h3 {
+    @apply text-gray-900 text-lg md:text-xl font-semibold mb-2;
+  }
+  
+  p {
+    @apply text-gray-900 mb-4 leading-relaxed;
+  }
+
+  a {
+    @apply text-gray-800 hover:text-gray-900 transition-colors;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gray-900 text-white px-4 py-2 rounded hover:opacity-90 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 px-4 py-2 rounded hover:opacity-90 transition-colors;
+  }
+  
+  .card {
+    @apply text-gray-900 bg-white rounded shadow-md p-4 hover:shadow-lg transition-shadow;
+  }
+
+  .container {
+    @apply text-gray-900 mx-auto px-4 max-w-7xl;
+  }
+
+  .input {
+    @apply text-gray-900 w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gray-400;
+  }
+
+  .nav-link {
+    @apply px-3 py-2 text-gray-700 hover:text-gray-900 transition-colors;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .grid-auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
