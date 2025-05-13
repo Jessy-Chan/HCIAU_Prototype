@@ -34,7 +34,7 @@ const HomePage = () => {
                 />
                 <div>
                   <h3 className="font-semibold">{exhibition.title}</h3>
-                  <p className="text-sm text-gray-600">{exhibition.dateRange}</p>
+                  <p className="text-sm text-gray-600">{exhibition.daterange}</p>
                   <p className="text-sm text-gray-500 mt-1">{exhibition.description}</p>
                 </div>
               </div>

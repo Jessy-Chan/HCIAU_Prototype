@@ -8,7 +8,7 @@ const PhotoGallery = () => {
   const { photoGallery } = content.exhibitions;
 
   return (
-    <PageTemplate title="Photo Gallery">
+    <PageTemplate title={photoGallery.title}>
       <div className="space-y-6">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {photoGallery.images.map((image) => (
@@ -32,7 +32,7 @@ const PhotoGallery = () => {
               onClick={() => setSelectedImage(null)}
               className="absolute top-4 right-4 text-white"
             >
-              Close
+              {photoGallery.closetext}
             </button>
             <img
               src={selectedImage.full}

@@ -1,24 +1,35 @@
 export const exhibitions = {
-  current: [
-    {
-      id: "ex2023001",
-      title: "Contemporary Malaysian Art Now",
-      dateRange: "1 Oct - 31 Dec 2023",
-      description: "Showcasing the latest works from Malaysia's leading contemporary artists",
-      featured: true,
-      image: "/public/images/exhibitions/contemporary-2023.jpg",
-      artists: ["Sarah Lee", "Ahmad Hassan", "Raj Kumar"]
-    }
-  ],
-  upcoming: [
-    {
-      id: "ex2024001",
-      title: "Traditional Crafts Revival",
-      dateRange: "15 Jan - 15 Mar 2024",
-      description: "Exploring Malaysian traditional crafts in modern context"
-    }
-  ],
+  current: {
+    title: "Current Exhibitions",
+    artiststext: "Featured Artists",
+    datetext: "Date",
+    array: [
+      {
+        id: "ex2023001",
+        title: "Contemporary Malaysian Art Now",
+        daterange: "1 Oct - 31 Dec 2023",
+        description: "Showcasing the latest works from Malaysia's leading contemporary artists",
+        featured: true,
+        image: "/public/images/exhibitions/contemporary-2023.jpg",
+        artists: ["Sarah Lee", "Ahmad Hassan", "Raj Kumar"]
+      }
+    ]
+  },
+  upcoming: {
+    title: "Upcoming Exhibitions",
+    datetext: "Exhibition Date",
+    array: [
+      {
+        id: "ex2024001",
+        title: "Traditional Crafts Revival",
+        daterange: "15 Jan - 15 Mar 2024",
+        description: "Exploring Malaysian traditional crafts in modern context"
+      }
+    ]
+  },
   archive: {
+    title: "Exhibition Archive",
+    yearselectortext: "Select Year",
     years: [2023, 2022, 2021],
     exhibitions: {
       // Keyed by year
@@ -31,19 +42,27 @@ export const exhibitions = {
       ]
     }
   },
-  curatorsChoice: [
-    {
-      month: "October 2023",
-      artwork: {
-        title: "Urban Dreams",
-        artist: "Lee Ming",
-        year: 2023,
-        medium: "Mixed Media",
-        description: "A commentary on urban development"
+  curatorsChoice: {
+    title: "Curator's Choice",
+    artisttext: "Artist",
+    mediumtext: "Medium",
+    yeartext: "Year",
+    array: [
+      {
+        month: "October 2023",
+        artwork: {
+          title: "Urban Dreams",
+          artist: "Lee Ming",
+          year: 2023,
+          medium: "Mixed Media",
+          description: "A commentary on urban development"
+        }
       }
-    }
-  ],
+    ]
+  },
   ethics: {
+    title: "Gallery Ethics",
+    introtext: "Our commitment to ethical practices in art exhibition",
     guidelines: [
       "Respect for artistic integrity",
       "Proper artwork handling procedures",
@@ -51,6 +70,8 @@ export const exhibitions = {
     ]
   },
   shop: {
+    title: "Gallery Shop",
+    pricetext: "Price",
     categories: [
       {
         name: "Books & Catalogs",
@@ -65,6 +86,8 @@ export const exhibitions = {
     ]
   },
   photoGallery: {
+    title: "Photo Gallery",
+    closetext: "Close",
     images: [
       {
         id: "img001",
@@ -77,6 +100,8 @@ export const exhibitions = {
     ]
   },
   videoGallery: {
+    title: "Video Gallery",
+    durationtext: "Duration",
     videos: [
       {
         id: "vid001",

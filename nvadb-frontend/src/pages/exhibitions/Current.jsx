@@ -4,13 +4,13 @@ import Card from '../../components/Card';
 import { useContent } from '../../contexts/ContentContext';
 
 const Current = () => {
-  const { content, locale, changeLocale } = useContent();
+  const { content } = useContent();
   const { current } = content.exhibitions;
 
   return (
-    <PageTemplate title="Current Exhibitions">
+    <PageTemplate title={current.title}>
       <div className="space-y-8">
-        {current.map((exhibition) => (
+        {current.array.map((exhibition) => (
           <Card key={exhibition.id} className="overflow-hidden">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="aspect-w-16 aspect-h-9">
@@ -22,10 +22,20 @@ const Current = () => {
               </div>
               <div>
                 <h2 className="text-xl font-semibold">{exhibition.title}</h2>
-                <p className="text-primary">{exhibition.dateRange}</p>
+                <p className="text-primary">
+                  <span className="font-medium">{current.datetext}: </span>
+                  {exhibition.daterange}
+                </p>
                 <p className="text-gray-600 mt-2">{exhibition.description}</p>
                 <div className="mt-4">
-                  <h3 className="font-medium">Featured Artists</h3>
+                  <h3 className="font-medium">{current.artiststext}</h3>
+                  <div className="mt-2">
+                    {exhibition.artists.map((artist, index) => (
+                      <span key={index} className="text-primary">
+                        {artist}{index < exhibition.artists.length - 1 ? ', ' : ''}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

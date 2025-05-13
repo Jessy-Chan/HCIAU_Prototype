@@ -4,14 +4,15 @@ import Card from '../../components/Card';
 import { useContent } from '../../contexts/ContentContext';
 
 const Archive = () => {
-  const { content, locale, changeLocale } = useContent();
+  const { content } = useContent();
   const { archive } = content.exhibitions;
   const [selectedYear, setSelectedYear] = useState(archive.years[0]);
 
   return (
-    <PageTemplate title="Exhibition Archive">
+    <PageTemplate title={archive.title}>
       <div className="space-y-6">
         <div className="flex gap-2">
+          <span className="mr-2 py-2">{archive.yearselectortext}:</span>
           {archive.years.map((year) => (
             <button
               key={year}

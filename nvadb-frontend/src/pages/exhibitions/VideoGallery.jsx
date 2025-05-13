@@ -3,11 +3,11 @@ import PageTemplate from '../../components/PageTemplate/PageTemplate';
 import { useContent } from '../../contexts/ContentContext';
 
 const VideoGallery = () => {
-  const { content, locale, changeLocale } = useContent();
+  const { content } = useContent();
   const { videoGallery } = content.exhibitions;
 
   return (
-    <PageTemplate title="Video Gallery">
+    <PageTemplate title={videoGallery.title}>
       <div className="grid gap-8">
         {videoGallery.videos.map((video) => (
           <div key={video.id} className="space-y-4">
@@ -23,7 +23,10 @@ const VideoGallery = () => {
             <div>
               <h2 className="text-xl font-semibold">{video.title}</h2>
               <p className="text-gray-600">{video.description}</p>
-              <p className="text-sm text-gray-500">{video.duration}</p>
+              <p className="text-sm text-gray-500">
+                <span className="font-medium">{videoGallery.durationtext}: </span>
+                {video.duration}
+              </p>
             </div>
           </div>
         ))}

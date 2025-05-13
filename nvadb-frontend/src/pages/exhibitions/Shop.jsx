@@ -4,11 +4,11 @@ import Card from '../../components/Card';
 import { useContent } from '../../contexts/ContentContext';
 
 const Shop = () => {
-  const { content, locale, changeLocale } = useContent();
+  const { content } = useContent();
   const { shop } = content.exhibitions;
 
   return (
-    <PageTemplate title="Gallery Shop">
+    <PageTemplate title={shop.title}>
       <div className="space-y-8">
         {shop.categories.map((category) => (
           <section key={category.name}>
@@ -24,7 +24,10 @@ const Shop = () => {
                     />
                   </div>
                   <h3 className="font-medium">{item.title}</h3>
-                  <p className="text-primary">{item.price}</p>
+                  <p className="text-primary">
+                    <span className="font-medium">{shop.pricetext}: </span>
+                    {item.price}
+                  </p>
                 </Card>
               ))}
             </div>
