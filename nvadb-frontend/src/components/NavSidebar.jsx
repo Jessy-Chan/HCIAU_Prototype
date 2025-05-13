@@ -37,11 +37,11 @@ const NavSidebar = ({ isOpen, toggleSidebar }) => {
   };
 
   return (
-    <nav ref={navRef} className={`fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out overflow-y-auto ${
+    <nav ref={navRef} className={`fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out overflow-y-auto z-[51] ${
       isOpen ? 'translate-x-0' : '-translate-x-full'
     } md:translate-x-0`}>
-      <div className="p-4">
-        <ul className="space-y-2">
+      <div className="p-4 flex flex-col h-full">
+        <ul className="space-y-2 flex-grow">
           {navigation.map((section) => {
             const subItems = getSubItems(section.path);
             return (
@@ -83,6 +83,10 @@ const NavSidebar = ({ isOpen, toggleSidebar }) => {
             );
           })}
         </ul>
+        
+        <div className="mt-4 pt-4 border-t border-gray-200 text-xs text-gray-500 text-center">
+          {content?.metadata?.navigation?.rights}
+        </div>
       </div>
     </nav>
   );

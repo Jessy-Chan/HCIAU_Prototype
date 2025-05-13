@@ -14,7 +14,7 @@ const MobileMenu = () => {
   ];
 
   return (
-    <nav className="bg-primary text-white">
+    <nav className="bg-primary text-white z-[60]">
       <div className="px-4 py-3 flex justify-between items-center">
         <Link to="/" className="font-bold text-xl">NVADB</Link>
         <button onClick={() => setIsOpen(!isOpen)} className="p-2">

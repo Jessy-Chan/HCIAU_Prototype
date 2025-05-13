@@ -2,17 +2,12 @@ import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from '../components/Header';
 import NavSidebar from '../components/NavSidebar';
-import Footer from '../components/Footer';
+import BottomNav from '../components/BottomNav';
 import { useContent } from '../contexts/ContentContext';
 
 const MobileLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const { content, locale, changeLocale } = useContent();
-  const contact = content?.about?.contact || {
-    address: '',
-    phone: '',
-    hours: ''
-  };
+  const { content } = useContent();
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
@@ -21,7 +16,7 @@ const MobileLayout = () => {
         siteName={content?.metadata?.siteName}
       />
       
-      <div className="flex flex-1 pt-16">
+      <div className="flex flex-1 pt-16 pb-16"> {/* Added pb-16 for bottom nav spacing */}
         <NavSidebar 
           isOpen={sidebarOpen} 
           toggleSidebar={setSidebarOpen}
@@ -34,7 +29,7 @@ const MobileLayout = () => {
         </main>
       </div>
       
-      <Footer contact={contact} />
+      <BottomNav />
     </div>
   );
 };

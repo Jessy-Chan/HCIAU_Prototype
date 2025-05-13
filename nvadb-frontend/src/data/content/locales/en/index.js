@@ -121,28 +121,17 @@ export const en = {
             { title: 'Client Charter', path: '/legal/charter' }
           ]
         }
-      ]
-    }
-  },
-  footer: {
-    quicklinkstitle: 'Quick Links',
-    quicklinks: [
-      { title: 'Visit Us', path: '/visit' },
-      { title: 'Current Exhibitions', path: '/exhibitions/current' },
-      { title: 'Contact', path: '/about/contact' },
-      { title: 'FAQs', path: '/research/faq' }
-    ],
-    contacttitle: 'Contact',
-    contact: {
-      address: 'National Visual Arts Development Board, 1234 Jalan Seni, 50480 Kuala Lumpur, Malaysia',
-      phonetext: 'Phone',
-      phone: '+603-1234-5678',
-      hourstext: 'Business Hours',
-      hours: 'Mon-Fri: 9am - 5pm'
+      ],
+      rights: '© 2025 National Visual Arts Development Board. All rights reserved.',
     },
-    followtitle: 'Follow Us',
-    rights: '© 2025 National Visual Arts Development Board. All rights reserved.',
-  }
+    bottomNav: [
+      {title: 'Home', path:'/', icon:'/images/icons/home.png'},
+      {title: 'About', path:'/about/history', icon:'/images/icons/about.png'},
+      {title: 'Visit', path:'/visit/admission', icon:'/images/icons/visit.png'},
+      {title: 'Engage', path:'/engage/membership', icon:'/images/icons/engage.png'},
+      {title: 'Legal', path:'/legal/privacy', icon:'/images/icons/legal.png'},
+    ],
+  },
 };
 
 export default en;

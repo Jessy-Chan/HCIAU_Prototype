@@ -121,27 +121,16 @@ export const ms = {
             { title: 'Piagam Pelanggan', path: '/legal/charter' }
           ]
         }
-      ]
-    }
-  },
-  footer: {
-    quicklinkstitle: 'Pautan Pantas',
-    quicklinks: [
-      { title: 'Lawati Kami', path: '/visit' },
-      { title: 'Pameran Terkini', path: '/exhibitions/current' },
-      { title: 'Hubungi', path: '/about/contact' },
-      { title: 'Soalan Lazim', path: '/research/faq' }
-    ],
-    contacttitle: 'Hubungi Kami',
-    contact: {
-      address: 'Jalan Tembaga, Off Jalan Chan Sow Lin, 55200 Kuala Lumpur, Malaysia',
-      phonetext: 'Telefon',
-      phone: '+603-9222 8888',
-      hourstext: 'Waktu Operasi',
-      hours: 'Isnin - Jumaat: 10:00 AM - 6:00 PM'
+      ],
+      rights: 'Hak Cipta © 2025 Lembaga Pembangunan Seni Visual Kebangsaan. Semua hak terpelihara.',
     },
-    followtitle: 'Ikuti Kami',
-    rights: 'Hak Cipta © 2025 Lembaga Pembangunan Seni Visual Kebangsaan. Semua hak terpelihara.',
+    bottomNav: [
+      {title: 'Utama', path:'/', icon:'/images/icons/home.png'},
+      {title: 'Tentang', path:'/about/history', icon:'/images/icons/about.png'},
+      {title: 'Lawatan', path:'/visit/admission', icon:'/images/icons/visit.png'},
+      {title: 'Libat', path:'/engage/membership', icon:'/images/icons/engage.png'},
+      {title: 'Undang', path:'/legal/privacy', icon:'/images/icons/legal.png'},
+    ],
   }
 };
 
