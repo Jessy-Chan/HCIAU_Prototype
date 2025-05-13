@@ -17,7 +17,7 @@ export const about = {
   mission: {
     title: "Misi Kami",
     content: "Untuk membangun dan mempromosikan seni visual Malaysia melalui kecemerlangan dalam pameran, pendidikan, dan penyelidikan",
-    objectivesTitle: "Objektif Kami",
+    objectivestitle: "Objektif Kami",
     objectives: [
       "Memelihara dan mempromosikan warisan seni visual Malaysia",
       "Menyokong artis baru dan bentuk seni baharu",

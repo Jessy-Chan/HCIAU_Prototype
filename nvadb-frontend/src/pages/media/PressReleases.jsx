@@ -8,10 +8,10 @@ const PressReleases = () => {
   const { pressreleases } = content.media;
 
   return (
-    <PageTemplate title="Press Releases">
+    <PageTemplate title={pressreleases.title}>
       <div className="space-y-8">
         <section>
-          <h2 className="text-xl font-semibold mb-4">Latest Press Releases</h2>
+          <h2 className="text-xl font-semibold mb-4">{pressreleases.latesttitle}</h2>
           {pressreleases.latest.map((release) => (
             <Card key={release.id} className="mb-4">
               <div className="space-y-4">
@@ -21,8 +21,8 @@ const PressReleases = () => {
                 </div>
                 <p className="text-gray-600">{release.summary}</p>
                 <div className="text-sm text-gray-500">
-                  <p>Contact: {release.contactPerson}</p>
-                  <p>Email: {release.contactEmail}</p>
+                  <p>Contact: {release.contactperson}</p>
+                  <p>Email: {release.contactemail}</p>
                 </div>
               </div>
             </Card>
@@ -30,7 +30,7 @@ const PressReleases = () => {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold mb-4">Archive</h2>
+          <h2 className="text-xl font-semibold mb-4">{pressreleases.archivetitle}</h2>
           {Object.entries(pressreleases.archive).map(([year, releases]) => (
             <div key={year} className="mb-6">
               <h3 className="font-medium mb-2">{year}</h3>
@@ -42,7 +42,7 @@ const PressReleases = () => {
                         <h4 className="font-medium">{release.title}</h4>
                         <p className="text-sm text-gray-500">{release.date}</p>
                       </div>
-                      <button className="text-primary">Read More</button>
+                      <button className="text-primary">{pressreleases.readmore}</button>
                     </div>
                   </Card>
                 ))}

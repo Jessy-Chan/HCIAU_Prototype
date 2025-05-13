@@ -19,7 +19,7 @@ const MissionVision = () => {
           <p className="text-gray-600">{mission.content}</p>
           {mission.objectives && (
             <>
-              <h3 className="text-lg font-semibold mt-4 mb-2">{mission.objectivesTitle}</h3>
+              <h3 className="text-lg font-semibold mt-4 mb-2">{mission.objectivestitle}</h3>
               <ul className="list-disc pl-5 space-y-2">
                 {mission.objectives.map((objective, index) => (
                   <li key={index} className="text-gray-600">{objective}</li>

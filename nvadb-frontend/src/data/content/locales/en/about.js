@@ -17,7 +17,7 @@ export const about = {
   mission: {
     title: "Our Mission",
     content: "To develop and promote Malaysian visual arts through excellence in exhibitions, education, and research",
-    objectivesTitle: "Our Objectives",
+    objectivestitle: "Our Objectives",
     objectives: [
       "Preserve and promote Malaysian visual arts heritage",
       "Support emerging artists and new art forms",

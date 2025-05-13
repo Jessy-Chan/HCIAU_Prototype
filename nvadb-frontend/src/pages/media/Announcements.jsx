@@ -8,10 +8,10 @@ const Announcements = () => {
   const { announcements } = content.media;
 
   return (
-    <PageTemplate title="Announcements & Archive">
+    <PageTemplate title={announcements.title}>
       <div className="space-y-8">
         <section>
-          <h2 className="text-xl font-semibold mb-4">Current Announcements</h2>
+          <h2 className="text-xl font-semibold mb-4">{announcements.currenttitle}</h2>
           {announcements.current.map((announcement) => (
             <Card key={announcement.id} className="mb-4">
               <span className="inline-block px-2 py-1 text-sm bg-primary/10 text-primary rounded mb-2">
@@ -25,7 +25,7 @@ const Announcements = () => {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold mb-4">Archived Announcements</h2>
+          <h2 className="text-xl font-semibold mb-4">{announcements.archivetitle}</h2>
           <div className="space-y-4">
             {announcements.archive.map((announcement) => (
               <Card key={announcement.id} className="hover:bg-gray-50">

@@ -23,7 +23,7 @@ const HomePage = () => {
             {aboutus.content}
           </div>
         </Card>
-        <Card title={featured.exhibitionsTitle}>
+        <Card title={featured.exhibitionstitle}>
           <div className="space-y-4">
             {featured.exhibitions.map((exhibition) => (
               <div key={exhibition.id} className="flex gap-4">
@@ -41,7 +41,7 @@ const HomePage = () => {
             ))}
           </div>
         </Card>        
-        <Card title={featured.eventsTitle}>
+        <Card title={featured.eventstitle}>
           <div className="divide-y">
             {featured.events.map((event) => (
               <div key={event.id} className="py-3">

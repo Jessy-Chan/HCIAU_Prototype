@@ -9,8 +9,8 @@ export const home = {
     content: "Pameran Balai Seni Lukis Negara kali ini akan membawa penonton melihat koleksi tetapnya dari konteks Tenggara, menonjolkan kesahihan, tafsiran dan fiksyen, serta mengesan intipati struktur sosial dan budaya yang membentuk permaidani tenggara di rantau ini. Tenggara di sini merujuk kepada negara dalam topologi Asia Tenggara. Nusa dalam bahasa Melayu mungkin diterjemahkan sebagai tanah air atau tanah air dalam bahasa Inggeris. Dalam membina naratif, lapan segmen telah dibuat. Meneroka Cerita dan Menghubungkan Dunia akan melihat dari sudut pensejarahan, hubungan antarabangsa dan aktiviti ekonomi yang telah berlaku. Mencari Intipati dan perkara di bawah Simbol, Fon/Bahasa, Pengekodan dan Pesona/ Ramalan akan melihat dari sudut pemahaman sesuatu perspektif dan menyahkod simbol, bahasa melalui tulisan, kod, azimat dan ritual. Mobility, Diaspora, Longing and Vibe the Verve, Escalating Geist akan melihat persoalan identiti dalam superdiversiti yang telah dicipta oleh penghijrahan, dan pada monumen dan karya seni yang memberi suara atau bentuk kepada semangat. Budaya Solicitude dan Menyemai Ciri Batin akan dilihat dari sudut gaya hidup dan perpaduan negara serta bahasa visual dan simbol budaya. Secara keseluruhannya, pameran itu mempamerkan pilihan karya daripada Koleksi Kebangsaan yang memberi respons kepada naratif segmen yang diketengahkan dari sudut pandangan sejarah dan mitologi, persoalan dan pencarian identiti, serta idea dan cadangan yang menyokong tanggapan Tenggara bahawa pameran ini cuba dicontohi."
   },
   featured: {
-  exhibitionsTitle: "Pameran Terkini",
-  eventsTitle: "Acara Akan Datang",
+  exhibitionstitle: "Pameran Terkini",
+  eventstitle: "Acara Akan Datang",
   exhibitions: [
     {
       id: "ex2023001",

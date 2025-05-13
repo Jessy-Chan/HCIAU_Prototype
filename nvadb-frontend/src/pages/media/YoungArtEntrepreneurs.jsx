@@ -13,7 +13,7 @@ const YoungArtEntrepreneurs = () => {
         <p className="text-lg text-gray-600">{yae.description}</p>
 
         <section>
-          <h2 className="text-xl font-semibold mb-4">Program Participants</h2>
+          <h2 className="text-xl font-semibold mb-4">{yae.participantstitle}</h2>
           <div className="grid gap-6 md:grid-cols-2">
             {yae.participants?.map((participant) => (
               <Card key={participant.id} className="flex space-x-4">
@@ -32,7 +32,7 @@ const YoungArtEntrepreneurs = () => {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold mb-4">Program Gallery</h2>
+          <h2 className="text-xl font-semibold mb-4">{yae.gallerytitle}</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {yae.gallery?.map((image) => (
               <div key={image.id} className="aspect-square">
@@ -47,7 +47,7 @@ const YoungArtEntrepreneurs = () => {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold mb-4">Testimonials</h2>
+          <h2 className="text-xl font-semibold mb-4">{yae.testimonialstitle}</h2>
           <div className="space-y-4">
             {yae.testimonials?.map((testimonial) => (
               <Card key={testimonial.id}>
