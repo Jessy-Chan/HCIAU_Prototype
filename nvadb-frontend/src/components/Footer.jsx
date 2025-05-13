@@ -12,11 +12,11 @@ const Footer = ({ contact = {} }) => {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">{footer.quicklinkstitles}</h3>
-            <ul className="space-y-2 text-gray-500">
-              {footer.quicklinks.map((link) => (
+            <h3 className="text-lg font-bold mb-4 text-gray-500">{footer.quicklinkstitle}</h3>
+            <ul className="space-y-2">
+              {footer?.quicklinks.map((link) => (
                 <li key={link.path}>
-                  <Link to={link.path} className="hover:text-gray-300">
+                  <Link to={link.path} className="text-white hover:text-gray-300">
                     {link.title}
                   </Link>
                 </li>
@@ -25,16 +25,16 @@ const Footer = ({ contact = {} }) => {
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">{footer.contacttitle}</h3>
-            <div className="text-gray-500">
-              {address && <p>{footer.contact.address}</p>}
-              {phone && <p>{footer.contact.phonetext}: {footer.contact.phone}</p>}
-              {hours && <p>{footer.contact.hourstext}: {footer.contact.hours}</p>}
+            <h3 className="text-lg font-bold mb-4 text-gray-500">{footer.contacttitle}</h3>
+            <div className="text-gray-100">
+              {address && <p className="text-gray-100">{footer.contact.address}</p>}
+              {phone && <p className="text-gray-100">{footer.contact.phonetext}: {footer.contact.phone}</p>}
+              {hours && <p className="text-gray-100">{footer.contact.hourstext}: {footer.contact.hours}</p>}
             </div>
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">{footer.followtitle}</h3>
+            <h3 className="text-lg font-bold mb-4 text-gray-500">{footer.followtitle}</h3>
             <div className="flex space-x-4 text-gray-500">
               {/* Add social media icons/links here */}
             </div>
