@@ -38,7 +38,7 @@ export const about = {
       name: "Dr. Ahmad bin Abdullah",
       title: "Ketua Pengarah",
       period: "2020-sekarang",
-      image: "/assets/images/director.jpg"
+      image: "/public/images/director.jpg"
     }
   },
 
@@ -78,7 +78,7 @@ export const about = {
     main: {
       name: "Bangunan Utama NVADB",
       description: "Bangunan modenist ikonik kami di jantung KL",
-      image: "/assets/images/main-building.jpg",
+      image: "/public/images/main-building.jpg",
       features: [
         "25,000 meter persegi ruang pameran",
         "Kemudahan pemuliharaan termoden",
@@ -122,13 +122,13 @@ export const about = {
       {
         id: "p001",
         name: "Malaysian Airlines",
-        logo: "/assets/images/partners/mas.png",
+        logo: "/public/images/partners/mas.png",
         contribution: "Rakan Perjalanan Rasmi"
       },
       {
         id: "p002",
         name: "Bank Negara Malaysia",
-        logo: "/assets/images/partners/bnm.png",
+        logo: "/public/images/partners/bnm.png",
         contribution: "Penaja Pameran"
       }
     ],

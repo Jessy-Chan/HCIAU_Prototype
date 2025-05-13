@@ -6,7 +6,7 @@ export const exhibitions = {
       dateRange: "1 Oct - 31 Dec 2023",
       description: "Showcasing the latest works from Malaysia's leading contemporary artists",
       featured: true,
-      image: "/assets/images/exhibitions/contemporary-2023.jpg",
+      image: "/public/images/exhibitions/contemporary-2023.jpg",
       artists: ["Sarah Lee", "Ahmad Hassan", "Raj Kumar"]
     }
   ],
@@ -69,8 +69,8 @@ export const exhibitions = {
       {
         id: "img001",
         title: "Opening Night - Contemporary Art Exhibition",
-        thumbnail: "/assets/images/gallery/thumb/opening-night.jpg",
-        full: "/assets/images/gallery/full/opening-night.jpg",
+        thumbnail: "/public/images/gallery/thumb/opening-night.jpg",
+        full: "/public/images/gallery/full/opening-night.jpg",
         date: "2023-10-01"
       }
       // More images...

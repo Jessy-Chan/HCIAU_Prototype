@@ -13,9 +13,9 @@ const OrgChart = () => {
         
         <div className="relative w-full overflow-x-auto">
           <picture>
-            <source srcSet="/assets/images/org-chart-mobile.svg" media="(max-width: 768px)" />
+            <source srcSet="/public/images/org-chart-mobile.svg" media="(max-width: 768px)" />
             <img 
-              src="/assets/images/org-chart.svg" 
+              src="/public/images/org-chart.svg" 
               alt="NVADB Organization Structure"
               className="w-full"
             />

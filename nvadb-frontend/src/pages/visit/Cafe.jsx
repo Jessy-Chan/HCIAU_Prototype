@@ -12,7 +12,7 @@ const Cafe = () => {
       <div className="space-y-8">
         <div className="aspect-w-16 aspect-h-9">
           <img
-            src="/assets/images/cafe.jpg"
+            src="/public/images/cafe.jpg"
             alt={cafe.name}
             className="object-cover rounded-lg"
           />

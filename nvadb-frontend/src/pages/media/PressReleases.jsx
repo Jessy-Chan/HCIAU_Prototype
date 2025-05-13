@@ -5,14 +5,14 @@ import { useContent } from '../../contexts/ContentContext';
 
 const PressReleases = () => {
   const { content, locale, changeLocale } = useContent();
-  const { pressReleases } = content.media;
+  const { pressreleases } = content.media;
 
   return (
     <PageTemplate title="Press Releases">
       <div className="space-y-8">
         <section>
           <h2 className="text-xl font-semibold mb-4">Latest Press Releases</h2>
-          {pressReleases.latest.map((release) => (
+          {pressreleases.latest.map((release) => (
             <Card key={release.id} className="mb-4">
               <div className="space-y-4">
                 <div>
@@ -31,7 +31,7 @@ const PressReleases = () => {
 
         <section>
           <h2 className="text-xl font-semibold mb-4">Archive</h2>
-          {Object.entries(pressReleases.archive).map(([year, releases]) => (
+          {Object.entries(pressreleases.archive).map(([year, releases]) => (
             <div key={year} className="mb-6">
               <h3 className="font-medium mb-2">{year}</h3>
               <div className="space-y-2">

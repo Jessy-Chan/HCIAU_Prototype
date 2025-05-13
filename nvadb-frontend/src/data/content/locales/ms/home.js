@@ -15,7 +15,7 @@ export const home = {
     {
       id: "ex2023001",
       title: "Seni Malaysia Kontemporari Kini",
-      image: "/assets/images/exhibitions/featured-1.jpg",
+      image: "/public/images/exhibitions/featured-1.jpg",
       date: "Pameran Terkini"
     }
   ],
