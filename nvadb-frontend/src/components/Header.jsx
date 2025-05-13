@@ -27,7 +27,7 @@ const Header = ({ toggleSidebar }) => {
           className="absolute left-1/2 transform -translate-x-1/2 flex items-center"
         >
           <img 
-            src="/images/icons/logo.png" 
+            src="/images/icons/logo.jpeg" 
             alt={content.metadata.siteName}
             className="h-12 w-auto"
           />

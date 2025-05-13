@@ -38,7 +38,7 @@ export const about = {
       name: "Dr. Ahmad bin Abdullah",
       title: "Director General",
       period: "2020-present",
-      image: "/public/images/director.jpg"
+      image: "/images/director.jpg"
     }
   },
 
@@ -78,7 +78,7 @@ export const about = {
     main: {
       name: "NVADB Main Building",
       description: "Our iconic modernist building in the heart of KL",
-      image: "/public/images/main-building.jpg",
+      image: "/images/main-building.jpg",
       features: [
         "25,000 square meters of exhibition space",
         "State-of-the-art conservation facilities",
@@ -122,13 +122,13 @@ export const about = {
       {
         id: "p001",
         name: "Malaysian Airlines",
-        logo: "/public/images/partners/mas.png",
+        logo: "/images/partners/mas.png",
         contribution: "Official Travel Partner"
       },
       {
         id: "p002",
         name: "Bank Negara Malaysia",
-        logo: "/public/images/partners/bnm.png",
+        logo: "/images/partners/bnm.png",
         contribution: "Exhibition Sponsor"
       }
     ],

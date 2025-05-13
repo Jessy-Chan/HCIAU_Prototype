@@ -5,13 +5,13 @@ import { useContent } from '../../contexts/ContentContext';
 const PhotoGallery = () => {
   const { content, locale, changeLocale } = useContent();
   const [selectedImage, setSelectedImage] = useState(null);
-  const { photoGallery } = content.exhibitions;
+  const { photogallery } = content.exhibitions;
 
   return (
-    <PageTemplate title={photoGallery.title}>
+    <PageTemplate title={photogallery.title}>
       <div className="space-y-6">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {photoGallery.images.map((image) => (
+          {photogallery.images.map((image) => (
             <button
               key={image.id}
               onClick={() => setSelectedImage(image)}
@@ -32,7 +32,7 @@ const PhotoGallery = () => {
               onClick={() => setSelectedImage(null)}
               className="absolute top-4 right-4 text-white"
             >
-              {photoGallery.closetext}
+              {photogallery.closetext}
             </button>
             <img
               src={selectedImage.full}

@@ -10,7 +10,7 @@ export const exhibitions = {
         daterange: "1 Oct - 31 Dec 2023",
         description: "Showcasing the latest works from Malaysia's leading contemporary artists",
         featured: true,
-        image: "/public/images/exhibitions/contemporary-2023.jpg",
+        image: "/images/exhibitions/contemporary-2023.jpg",
         artists: ["Sarah Lee", "Ahmad Hassan", "Raj Kumar"]
       }
     ]
@@ -85,21 +85,21 @@ export const exhibitions = {
       }
     ]
   },
-  photoGallery: {
+  photogallery: {
     title: "Photo Gallery",
     closetext: "Close",
     images: [
       {
         id: "img001",
-        title: "Opening Night - Contemporary Art Exhibition",
-        thumbnail: "/public/images/gallery/thumb/opening-night.jpg",
-        full: "/public/images/gallery/full/opening-night.jpg",
+        title: "A Gift from ASEAN Exhibition",
+        thumbnail: "/images/exhibitions/thumbnails/Poster-Pameran-Portal-NAG_Hadiah-Dari-Asean1.jpg",
+        full: "/images/exhibitions/full/Poster-Pameran-Portal-NAG_Hadiah-Dari-Asean1.jpg",
         date: "2023-10-01"
       }
       // More images...
     ]
   },
-  videoGallery: {
+  videogallery: {
     title: "Video Gallery",
     durationtext: "Duration",
     videos: [

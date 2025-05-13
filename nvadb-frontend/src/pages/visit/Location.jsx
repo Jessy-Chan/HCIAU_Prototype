@@ -12,7 +12,7 @@ const Location = () => {
         <div className="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg overflow-hidden">
           {/* Map component would go here */}
           <img 
-            src="/public/images/nag-map.jpg" 
+            src="/images/facilities/nav-map.jpg" 
             alt="NAG Location Map"
             className="object-cover w-full h-full"
           />

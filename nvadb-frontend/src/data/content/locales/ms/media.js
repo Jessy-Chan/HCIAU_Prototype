@@ -54,7 +54,7 @@ export const media = {
         id: "vid001",
         title: "Siri Dokumentari LPSVN Episod 1",
         description: "Perkembangan Seni Visual Malaysia",
-        thumbnail: "/public/images/videos/ep1-thumb.jpg",
+        thumbnail: "/images/videos/ep1-thumb.jpg",
         duration: "25:30",
         url: "https://youtube.com/..."
       }

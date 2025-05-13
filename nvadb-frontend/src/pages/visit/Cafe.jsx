@@ -10,12 +10,21 @@ const Cafe = () => {
   return (
     <PageTemplate title="Sejiwa Titiwangsa Café">
       <div className="space-y-8">
-        <div className="aspect-w-16 aspect-h-9">
-          <img
-            src="/public/images/cafe.jpg"
-            alt={cafe.name}
-            className="object-cover rounded-lg"
-          />
+        <div className="space-y-4">  {/* Added a container with vertical spacing */}
+          <div className="aspect-w-16 aspect-h-9">
+            <img
+              src="/images/facilities/cafe-1.jpg"
+              alt={cafe.name}
+              className="object-cover rounded-lg"
+            />
+          </div>
+          <div className="aspect-w-16 aspect-h-9">
+            <img
+              src="/images/facilities/cafe-2.jpg"
+              alt={cafe.name}
+              className="object-cover rounded-lg"
+            />
+          </div>
         </div>
 
         <section>

@@ -54,7 +54,7 @@ export const media = {
         id: "vid001",
         title: "LPSVN Documentary Series Ep.1",
         description: "Evolution of Malaysian Visual Arts",
-        thumbnail: "/public/images/videos/ep1-thumb.jpg",
+        thumbnail: "/images/videos/ep1-thumb.jpg",
         duration: "25:30",
         url: "https://youtube.com/..."
       }

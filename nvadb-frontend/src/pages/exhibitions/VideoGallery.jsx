@@ -4,12 +4,12 @@ import { useContent } from '../../contexts/ContentContext';
 
 const VideoGallery = () => {
   const { content } = useContent();
-  const { videoGallery } = content.exhibitions;
+  const { videogallery } = content.exhibitions;
 
   return (
-    <PageTemplate title={videoGallery.title}>
+    <PageTemplate title={videogallery.title}>
       <div className="grid gap-8">
-        {videoGallery.videos.map((video) => (
+        {videogallery.videos.map((video) => (
           <div key={video.id} className="space-y-4">
             <div className="aspect-w-16 aspect-h-9">
               <iframe
@@ -24,7 +24,7 @@ const VideoGallery = () => {
               <h2 className="text-xl font-semibold">{video.title}</h2>
               <p className="text-gray-600">{video.description}</p>
               <p className="text-sm text-gray-500">
-                <span className="font-medium">{videoGallery.durationtext}: </span>
+                <span className="font-medium">{videogallery.durationtext}: </span>
                 {video.duration}
               </p>
             </div>

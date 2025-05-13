@@ -10,7 +10,7 @@ export const exhibitions = {
         daterange: "1 Okt - 31 Dis 2023",
         description: "Menampilkan karya terkini daripada artis kontemporari utama Malaysia",
         featured: true,
-        image: "/public/images/exhibitions/contemporary-2023.jpg",
+        image: "/images/exhibitions/contemporary-2023.jpg",
         artists: ["Sarah Lee", "Ahmad Hassan", "Raj Kumar"]
       }
     ]
@@ -89,21 +89,21 @@ export const exhibitions = {
       }
     ]
   },
-  photoGallery: {
+  photogallery: {
     title: "Galeri Foto",
     pagetitle: "Galeri Foto",
     closetext: "Tutup",
     images: [
       {
         id: "img001",
-        title: "Malam Pembukaan - Pameran Seni Kontemporari",
-        thumbnail: "/public/images/gallery/thumb/opening-night.jpg",
-        full: "/public/images/gallery/full/opening-night.jpg",
+        title: "Hadiah Dari ASEAN",
+        thumbnail: "/images/exhibitions/thumbnails/Poster-Pameran-Portal-NAG_Hadiah-Dari-Asean1.jpg",
+        full: "/images/exhibitions/full/Poster-Pameran-Portal-NAG_Hadiah-Dari-Asean1.jpg",
         date: "2023-10-01"
       }
     ]
   },
-  videoGallery: {
+  videogallery: {
     title: "Galeri Video",
     pagetitle: "Galeri Video",
     durationtext: "Tempoh",
