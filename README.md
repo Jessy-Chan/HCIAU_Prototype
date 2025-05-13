@@ -26,3 +26,11 @@
    ```
 
 The application will be available at `http://localhost:1235`
+
+Shortcuts
+  press h to show help
+  press r to restart the server
+  press u to show server url
+  press o to open in browser
+  press c to clear console
+  press q to quit
