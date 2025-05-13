@@ -21,6 +21,11 @@ const NavSidebar = ({ isOpen, toggleSidebar }) => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [toggleSidebar]);
 
+  useEffect(() => {
+    // Reset scroll position on page change
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const toggleMenu = (e, path) => {
     e.preventDefault();
     setOpenMenus(prev => ({
@@ -37,58 +42,67 @@ const NavSidebar = ({ isOpen, toggleSidebar }) => {
   };
 
   return (
-    <nav ref={navRef} className={`fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out overflow-y-auto z-[51] ${
-      isOpen ? 'translate-x-0' : '-translate-x-full'
-    } md:translate-x-0`}>
-      <div className="p-4 flex flex-col h-full">
-        <ul className="space-y-2 flex-grow">
-          {navigation.map((section) => {
-            const subItems = getSubItems(section.path);
-            return (
-              <li key={section.path} className="relative">
-                <button
-                  onClick={(e) => toggleMenu(e, section.path)}
-                  className={`w-full flex items-center justify-between px-4 py-2 rounded-md text-gray-500 ${
-                    location.pathname.startsWith(section.path)
-                      ? 'bg-primary text-white'
-                      : 'hover:bg-gray-100'
-                  }`}
-                >
-                  {section.title}
-                  {subItems.length > 0 && (
-                    <ChevronDownIcon className={`h-4 w-4 transition-transform ${
-                      openMenus[section.path] ? 'rotate-180' : ''
-                    }`} />
+    <>
+      {/* Backdrop overlay */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-[50] md:hidden"
+          onClick={() => toggleSidebar(false)}
+        />
+      )}
+      <nav ref={navRef} className={`fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out overflow-y-auto z-[51] ${
+        isOpen ? 'translate-x-0' : '-translate-x-full'
+      } md:translate-x-0`}>
+        <div className="p-4 flex flex-col h-full">
+          <ul className="space-y-2 flex-grow">
+            {navigation.map((section) => {
+              const subItems = getSubItems(section.path);
+              return (
+                <li key={section.path} className="relative">
+                  <button
+                    onClick={(e) => toggleMenu(e, section.path)}
+                    className={`w-full flex items-center justify-between px-4 py-2 rounded-md text-gray-500 ${
+                      location.pathname.startsWith(section.path)
+                        ? 'bg-primary text-white'
+                        : 'hover:bg-gray-100'
+                    }`}
+                  >
+                    {section.title}
+                    {subItems.length > 0 && (
+                      <ChevronDownIcon className={`h-4 w-4 transition-transform ${
+                        openMenus[section.path] ? 'rotate-180' : ''
+                      }`} />
+                    )}
+                  </button>
+                  {subItems.length > 0 && openMenus[section.path] && (
+                    <ul className="mt-1 ml-4 space-y-1 border-l-2 border-gray-200">
+                      {subItems.map((item) => (
+                        <li key={item.path}>
+                          <Link
+                            to={item.path}
+                            className={`block px-4 py-1.5 text-sm rounded-md ${
+                              location.pathname === item.path
+                                ? 'text-primary font-medium'
+                                : 'text-gray-600 hover:text-primary'
+                            }`}
+                          >
+                            {item.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
                   )}
-                </button>
-                {subItems.length > 0 && openMenus[section.path] && (
-                  <ul className="mt-1 ml-4 space-y-1 border-l-2 border-gray-200">
-                    {subItems.map((item) => (
-                      <li key={item.path}>
-                        <Link
-                          to={item.path}
-                          className={`block px-4 py-1.5 text-sm rounded-md ${
-                            location.pathname === item.path
-                              ? 'text-primary font-medium'
-                              : 'text-gray-600 hover:text-primary'
-                          }`}
-                        >
-                          {item.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            );
-          })}
-        </ul>
-        
-        <div className="mt-4 pt-4 border-t border-gray-200 text-xs text-gray-500 text-center">
-          {content?.metadata?.navigation?.rights}
+                </li>
+              );
+            })}
+          </ul>
+          
+          <div className="mt-4 pt-4 border-t border-gray-200 text-xs text-gray-500 text-center">
+            {content?.metadata?.navigation?.rights}
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 
