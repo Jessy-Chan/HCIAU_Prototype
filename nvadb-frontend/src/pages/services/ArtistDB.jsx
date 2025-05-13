@@ -6,12 +6,12 @@ import { useContent } from '../../contexts/ContentContext';
 const ArtistDB = () => {
   const { content, locale, changeLocale } = useContent();
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const { artistDatabase } = content.services;
+  const { artistdb } = content.services;
 
   return (
-    <PageTemplate title="Data Pelukis Malaysia">
+    <PageTemplate title={artistdb.title}>
       <div className="space-y-6">
-        <p className="text-gray-600">{artistDatabase.description}</p>
+        <p className="text-gray-600">{artistdb.description}</p>
         
         <div className="flex flex-wrap gap-2">
           <button
@@ -22,9 +22,9 @@ const ArtistDB = () => {
                 : 'bg-gray-100'
             }`}
           >
-            All
+            {artistdb.alltext}
           </button>
-          {artistDatabase.categories.map((category) => (
+          {artistdb.categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
@@ -42,22 +42,21 @@ const ArtistDB = () => {
         <div className="grid gap-4 md:grid-cols-2">
           <input
             type="search"
-            placeholder="Search artists..."
+            placeholder={artistdb.searchplaceholder}
             className="w-full p-3 border rounded-lg bg-gray-100"
           />
           <select className="w-full p-3 border rounded-lg bg-gray-200">
-            {artistDatabase.searchFields.map((field) => (
+            {artistdb.searchFields.map((field) => (
               <option key={field} value={field}>
-                Search by {field}
+                {artistdb.searchbytext} {field}
               </option>
             ))}
           </select>
         </div>
 
         <div className="mt-6">
-          {/* Artist results would be populated here */}
           <p className="text-gray-500 text-center py-8">
-            Use the search above to find artists
+            {artistdb.searchdescription}
           </p>
         </div>
       </div>

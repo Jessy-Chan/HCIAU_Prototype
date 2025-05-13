@@ -5,34 +5,35 @@ import { useContent } from '../../contexts/ContentContext';
 
 const Feedback = () => {
   const { content, locale, changeLocale } = useContent();
-  const { feedback } = content.services;
+  const { feedback, formfields } = content.services;
 
   const formFields = [
     { 
       id: 'category', 
-      label: 'Feedback Category', 
+      label: formfields.category, 
       type: 'select', 
       options: feedback.categories,
       required: true 
     },
-    { id: 'title', label: 'Subject', type: 'text', required: true },
-    { id: 'message', label: 'Your Feedback', type: 'textarea', required: true },
-    { id: 'name', label: 'Name', type: 'text', required: true },
-    { id: 'email', label: 'Email', type: 'email', required: true },
-    { id: 'attachments', label: 'Attachments', type: 'file', multiple: true }
+    { id: 'title', label: formfields.subject, type: 'text', required: true },
+    { id: 'message', label: formfields.message, type: 'textarea', required: true },
+    { id: 'name', label: formfields.name, type: 'text', required: true },
+    { id: 'email', label: formfields.email, type: 'email', required: true },
+    { id: 'attachments', label: formfields.attachments, type: 'file', multiple: true }
   ];
 
   return (
-    <PageTemplate title="Feedback & Complaints">
+    <PageTemplate title={feedback.title}>
       <div className="max-w-2xl mx-auto">
         <p className="text-gray-600 mb-6">
-          We value your feedback to improve our services. Please fill out the form below.
+          {feedback.description}
         </p>
 
         <FormEmbed
-          title="Submit Feedback"
+          title={feedback.title}
           fields={formFields}
           onSubmit={(data) => console.log('Feedback submitted:', data)}
+          locale={locale}
         />
       </div>
     </PageTemplate>
