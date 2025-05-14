@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import { useContent } from '../contexts/ContentContext';
@@ -10,7 +10,24 @@ const Header = ({ toggleSidebar }) => {
     en: 'EN',
     ms: 'BM'
   };
-  
+  const flagImages = {
+    en: '/images/icons/en.png',
+    ms: '/images/icons/ms.png'
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
     <header className="fixed top-0 left-0 right-0 h-16 bg-black shadow-md z-[60]">
       <div className="flex items-center justify-between h-full px-4">
@@ -34,20 +51,45 @@ const Header = ({ toggleSidebar }) => {
         </Link>
         
         <div className="flex items-center space-x-4">
-          <Link to="/search" className="ml-4 p-1 bg-gray-700 text-white rounded hover:bg-gray-300">
-            {content.metadata.search}
+          <Link to="/search" className="rounded hover:bg-gray-600 flex items-center justify-center">
+            <img src="/images/icons/search.png" alt={content.metadata.search} className="h-8 w-8" />
           </Link>
-          <select 
-            value={locale} 
-            onChange={(e) => changeLocale(e.target.value)}
-            className="ml-4 p-1 rounded border border-gray-300"
-          >
-            {languages.map(lang => (
-              <option key={lang} value={lang}>
-                {languageNames[lang]}
-              </option>
-            ))}
-          </select>
+          <div className="relative" ref={dropdownRef}>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="ml-4 p-1 pl-8 rounded border border-gray-300 bg-gray-700 flex items-center min-w-[60px]"
+              style={{
+                backgroundImage: `url(${flagImages[locale]})`,
+                backgroundSize: '20px',
+                backgroundPosition: '4px center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            >
+              {languageNames[locale]}
+            </button>
+            {isOpen && (
+              <div className="absolute right-0 top-full mt-1 w-24 bg-gray-800 border border-gray-300 rounded-md shadow-lg z-50 py-1">
+                {languages.map(lang => (
+                  <button
+                    key={lang}
+                    onClick={() => {
+                      changeLocale(lang);
+                      setIsOpen(false);
+                    }}
+                    className="w-full px-3 py-2 pl-8 bg-gray-800 hover:bg-gray-100 hover:text-gray-800 text-left text-sm flex items-center"
+                    style={{
+                      backgroundImage: `url(${flagImages[lang]})`,
+                      backgroundSize: '16px',
+                      backgroundPosition: '8px center',
+                      backgroundRepeat: 'no-repeat'
+                    }}
+                  >
+                    {languageNames[lang]}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </header>
