@@ -8,8 +8,8 @@ const IntegrityUnit = () => {
   const { integrity } = content.about;
   
   const reportFormFields = [
-    { id: 'type', label: 'Report Type', type: 'select', options: integrity.reportTypes, required: true },
-    { id: 'description', label: 'Description', type: 'textarea', required: true },
+    { id: 'type', label: 'Report Type', type: 'select', options: integrity.reportTypes},
+    { id: 'description', label: 'Description', type: 'textarea'},
     { id: 'evidence', label: 'Supporting Documents', type: 'file', multiple: true },
     { id: 'contact', label: 'Contact Information', type: 'text', required: false }
   ];

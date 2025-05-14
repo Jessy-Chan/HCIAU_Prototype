@@ -35,10 +35,10 @@ const Help = () => {
             <FormEmbed
               title={help.requesttext}
               fields={[
-                { id: 'name', label: help.request.name, type: 'text', required: true },
-                { id: 'email', label: help.request.email, type: 'email', required: true },
-                { id: 'category', label: help.request.category, type: 'select', options: help.categories, required: true },
-                { id: 'message', label: help.request.message, type: 'textarea', required: true }
+                { id: 'name', label: help.request.name, type: 'text'},
+                { id: 'email', label: help.request.email, type: 'email'},
+                { id: 'category', label: help.request.category, type: 'select', options: help.categories},
+                { id: 'message', label: help.request.message, type: 'textarea'}
               ]}
               onSubmit={(data) => console.log('Support request:', data)}
             />

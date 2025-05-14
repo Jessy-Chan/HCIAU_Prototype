@@ -34,9 +34,9 @@ const Programs = () => {
                 <FormEmbed
                   title={programs.form[0].title}
                   fields={[
-                    { id: 'name', label: programs.form[0].name, type: 'text', required: true },
-                    { id: 'email', label: programs.form[0].email, type: 'email', required: true },
-                    { id: 'age', label: programs.form[0].age, type: 'number', required: true }
+                    { id: 'name', label: programs.form[0].name, type: 'text'},
+                    { id: 'email', label: programs.form[0].email, type: 'email'},
+                    { id: 'age', label: programs.form[0].age, type: 'number'}
                   ]}
                   onSubmit={(data) => console.log('Program registration:', data)}
                   locale={locale}

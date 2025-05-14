@@ -1,14 +1,20 @@
 import React, { useRef } from 'react';
 
 const FormEmbed = ({ title, fields, onSubmit, locale }) => {
-  const fileLabels = {
+  const labels = {
     ms: {
       choose: "Pilih Fail",
-      noFile: "Tiada fail dipilih"
+      noFile: "Tiada fail dipilih",
+      enter: "Masukkan",
+      required: "diperlukan!",
+      submit: "Hantar"
     },
     en: {
       choose: "Choose File",
-      noFile: "No file chosen"
+      noFile: "No file chosen",
+      enter: "Enter",
+      required: "is required!",
+      submit: "Submit"
     }
   };
 
@@ -20,30 +26,61 @@ const FormEmbed = ({ title, fields, onSubmit, locale }) => {
       return (
         <div className="flex items-center space-x-2">
           <label className="bg-primary text-white px-4 py-2 rounded cursor-pointer">
-            {fileLabels[locale].choose}
+            {labels[locale].choose}
             <input
               ref={fileInput}
               type="file"
               className="hidden"
               multiple={field.multiple}
-              required={field.required}
+              required={field.required !== undefined ? field.required : true}
               onChange={(e) => setFileName(e.target.files?.[0]?.name || '')}
             />
           </label>
           <span className="text-gray-600">
-            {fileName || fileLabels[locale].noFile}
+            {fileName || labels[locale].noFile}
           </span>
         </div>
       );
     }
 
+    const [validationMessage, setValidationMessage] = React.useState('');
+
+    const handleBlur = (e) => {
+      const message = (field.required !== undefined ? field.required : true) && !e.target.value 
+        ? `${field.id.charAt(0).toUpperCase() + field.id.slice(1)} ${labels[locale].required}`
+        : '';
+      setValidationMessage(message);
+    };
+
+    const handleEmailBlur = (e) => {
+      if (e.target.value && validationMessage=='') {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (field.type === 'email' && !emailPattern.test(e.target.value)) {
+          const message = 'Invalid email address';
+          setValidationMessage(message);
+        }
+      }
+    };
+
     return (
-      <input
-        type={field.type}
-        name={field.id}
-        className="w-full px-3 py-2 border rounded-md text-gray-700"
-        required={field.required}
-      />
+      <div>
+        <input
+          type={field.type}
+          name={field.id}
+          className="w-full px-3 py-2 border rounded-md text-gray-100 invalid:border-red-500"
+          required={field.required !== undefined ? field.required : true}
+          onBlur={(e) => {
+            handleBlur(e);
+            if (field.type === 'email') {
+              handleEmailBlur(e);
+            }
+          }}
+          onInput={(e) => {
+            setValidationMessage('');
+          }}
+        />
+        <label className="text-red-500 text-sm mt-1">{validationMessage}</label>
+      </div>
     );
   };
 
@@ -59,7 +96,7 @@ const FormEmbed = ({ title, fields, onSubmit, locale }) => {
         </div>
       ))}
       <button type="submit" className="btn-primary">
-        {locale === 'ms' ? 'Hantar' : 'Submit'}
+        {labels[locale].submit}
       </button>
     </form>
   );

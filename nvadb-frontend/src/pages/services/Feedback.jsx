@@ -12,14 +12,13 @@ const Feedback = () => {
       id: 'category', 
       label: formfields.category, 
       type: 'select', 
-      options: feedback.categories,
-      required: true 
+      options: feedback.categories
     },
-    { id: 'title', label: formfields.subject, type: 'text', required: true },
-    { id: 'message', label: formfields.message, type: 'textarea', required: true },
-    { id: 'name', label: formfields.name, type: 'text', required: true },
-    { id: 'email', label: formfields.email, type: 'email', required: true },
-    { id: 'attachments', label: formfields.attachments, type: 'file', multiple: true }
+    { id: 'title', label: formfields.subject, type: 'text'},
+    { id: 'message', label: formfields.message, type: 'textarea'},
+    { id: 'name', label: formfields.name, type: 'text'},
+    { id: 'email', label: formfields.email, type: 'email'},
+    { id: 'attachments', label: formfields.attachments, type: 'file', multiple: true, required:false}
   ];
 
   return (

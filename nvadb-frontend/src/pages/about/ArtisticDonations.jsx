@@ -8,11 +8,11 @@ const ArtisticDonations = () => {
   const { donations } = content.about;
   
   const donationFormFields = [
-    { id: 'artworkType', label: 'Type of Artwork', type: 'select', options: donations.artworkTypes, required: true },
-    { id: 'title', label: 'Artwork Title', type: 'text', required: true },
-    { id: 'artist', label: 'Artist Name', type: 'text', required: true },
-    { id: 'description', label: 'Description', type: 'textarea', required: true },
-    { id: 'images', label: 'Artwork Images', type: 'file', multiple: true, required: true },
+    { id: 'artworkType', label: 'Type of Artwork', type: 'select', options: donations.artworkTypes},
+    { id: 'title', label: 'Artwork Title', type: 'text'},
+    { id: 'artist', label: 'Artist Name', type: 'text'},
+    { id: 'description', label: 'Description', type: 'textarea'},
+    { id: 'images', label: 'Artwork Images', type: 'file', multiple: true},
     { id: 'documents', label: 'Supporting Documents', type: 'file', multiple: true }
   ];
 

@@ -14,8 +14,8 @@ const ProtectedPortal = ({ title, system }) => {
         <FormEmbed
           title="Login"
           fields={[
-            { id: 'username', label: 'Username', type: 'text', required: true },
-            { id: 'password', label: 'Password', type: 'password', required: true }
+            { id: 'username', label: 'Username', type: 'text'},
+            { id: 'password', label: 'Password', type: 'password'}
           ]}
           onSubmit={(data) => {
             window.location.href = system.url;

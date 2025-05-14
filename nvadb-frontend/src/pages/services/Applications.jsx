@@ -41,9 +41,9 @@ const Applications = () => {
               <FormEmbed
                 title={`${applications.form.title} ${selectedCategory.title}`}
                 fields={[
-                  { id: 'name', label: applications.form.name, type: 'text', required: true },
-                  { id: 'email', label: applications.form.email, type: 'email', required: true },
-                  { id: 'documents', label: applications.form.documents, type: 'file', multiple: true, required: true }
+                  { id: 'name', label: applications.form.name, type: 'text'},
+                  { id: 'email', label: applications.form.email, type: 'email'},
+                  { id: 'documents', label: applications.form.documents, type: 'file', multiple: true}
                 ]}
                 onSubmit={() => setSelectedCategory(null)}
                 locale={locale}
