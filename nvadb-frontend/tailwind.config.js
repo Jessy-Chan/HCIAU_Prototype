@@ -13,7 +13,12 @@ module.exports = {
       },
       ringColor: {
         DEFAULT: '#000000',
-      }
+      },
+      fontFamily: {
+        'heading': ['Georgia', 'serif'],
+        'body': ['Roboto', 'sans-serif'],
+        'code': ['Courier New', 'monospace'],
+      },
     },
   },
   plugins: [require("daisyui")],
