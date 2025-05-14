@@ -31,7 +31,7 @@ const Search = () => {
   );
 
   return (
-    <PageTemplate title="Search">
+    <PageTemplate title = {content.metadata.search}>
       <div className="max-w-2xl mx-auto p-4">
         <input
           type="text"
