@@ -45,13 +45,13 @@ const Admission = () => {
             </Card>
             <Card>
               <h3 className="font-medium mb-2">{admission.fees.special.title}</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-4">
                 {Object.entries(admission.fees.special).map(([key, value]) => {
                   if (key === 'title') return null;
                   return (
-                    <li key={key} className="flex justify-between">
-                      <span className="capitalize">{value.type || key}</span>
-                      <span>{value.price || value}</span>
+                    <li key={key}>
+                      <div className="font-medium capitalize">{value.type || key}</div>
+                      <div className="ml-4 text-right">{value.price || value}</div>
                     </li>
                   );
                 })}
