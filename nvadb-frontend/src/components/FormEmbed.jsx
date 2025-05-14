@@ -7,14 +7,16 @@ const FormEmbed = ({ title, fields, onSubmit, locale }) => {
       noFile: "Tiada fail dipilih",
       enter: "Masukkan",
       required: "diperlukan!",
-      submit: "Hantar"
+      submit: "Hantar",
+      invalidEmail: "Alamat emel tidak sah"
     },
     en: {
       choose: "Choose File",
       noFile: "No file chosen",
       enter: "Enter",
       required: "is required!",
-      submit: "Submit"
+      submit: "Submit",
+      invalidEmail: "Invalid email address"
     }
   };
 
@@ -56,7 +58,7 @@ const FormEmbed = ({ title, fields, onSubmit, locale }) => {
       if (e.target.value && validationMessage=='') {
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (field.type === 'email' && !emailPattern.test(e.target.value)) {
-          const message = 'Invalid email address';
+          const message = labels[locale].invalidEmail;
           setValidationMessage(message);
         }
       }
