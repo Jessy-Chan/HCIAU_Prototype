@@ -36,6 +36,8 @@ export const en = {
         {
           title: 'About',
           path: '/about',
+          icon:'/images/icons/about.png',
+          icontoggle:'/images/icons/about_w.png',
           items: [
             { title: 'History', path: '/about/history' },
             { title: 'Mission & Vision', path: '/about/mission-vision' },
@@ -47,6 +49,8 @@ export const en = {
         {
           title: 'Visit',
           path: '/visit',
+          icon:'/images/icons/visit.png',
+          icontoggle:'/images/icons/visit_w.png',
           items: [
             { title: 'Location', path: '/visit/location' },
             { title: 'Admission', path: '/visit/admission' },
@@ -57,6 +61,8 @@ export const en = {
         {
           title: 'Exhibitions',
           path: '/exhibitions',
+          icon:'/images/icons/exhibitions.png',
+          icontoggle:'/images/icons/exhibitions_w.png',
           items: [
             { title: 'Current', path: '/exhibitions/current' },
             { title: 'Upcoming', path: '/exhibitions/upcoming' },
@@ -71,6 +77,8 @@ export const en = {
         {
           title: 'Engage',
           path: '/engage',
+          icon:'/images/icons/engage.png',
+          icontoggle:'/images/icons/engage_w.png',
           items: [
             { title: 'Programs', path: '/engage/programs' },
             { title: 'Membership', path: '/engage/membership' },
@@ -81,6 +89,8 @@ export const en = {
         {
           title: 'Research',
           path: '/research',
+          icon:'/images/icons/research.png',
+          icontoggle:'/images/icons/research_w.png',
           items: [
             { title: 'Publications', path: '/research/publications' },
             { title: 'Archive', path: '/research/archive' },
@@ -93,6 +103,8 @@ export const en = {
         {
           title: 'Services',
           path: '/services',
+          icon:'/images/icons/services.png',
+          icontoggle:'/images/icons/services_w.png',
           items: [
             { title: 'Applications', path: '/services/applications' },
             { title: 'Artist Database', path: '/services/artist-database' },
@@ -103,6 +115,8 @@ export const en = {
         {
           title: 'Media',
           path: '/media',
+          icon:'/images/icons/media.png',
+          icontoggle:'/images/icons/media_w.png',
           items: [
             { title: 'Press Releases', path: '/media/press' },
             { title: 'Announcements', path: '/media/announcements' },
@@ -113,6 +127,8 @@ export const en = {
         {
           title: 'Legal',
           path: '/legal',
+          icon:'/images/icons/legal.png',
+          icontoggle:'/images/icons/legal_w.png',
           items: [
             { title: 'Privacy Policy', path: '/legal/privacy' },
             { title: 'Security', path: '/legal/security' },

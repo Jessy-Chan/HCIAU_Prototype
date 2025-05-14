@@ -36,6 +36,8 @@ export const ms = {
         {
           title: 'Tentang Kami',
           path: '/about',
+          icon:'/images/icons/about.png',
+          icontoggle:'/images/icons/about_w.png',
           items: [
             { title: 'Sejarah', path: '/about/history' },
             { title: 'Misi & Visi', path: '/about/mission-vision' },
@@ -47,6 +49,8 @@ export const ms = {
         {
           title: 'Lawatan',
           path: '/visit',
+          icon:'/images/icons/visit.png',
+          icontoggle:'/images/icons/visit_w.png',
           items: [
             { title: 'Lokasi', path: '/visit/location' },
             { title: 'Kemasukan', path: '/visit/admission' },
@@ -57,6 +61,8 @@ export const ms = {
         {
           title: 'Pameran',
           path: '/exhibitions',
+          icon:'/images/icons/exhibitions.png',
+          icontoggle:'/images/icons/exhibitions_w.png',
           items: [
             { title: 'Terkini', path: '/exhibitions/current' },
             { title: 'Akan Datang', path: '/exhibitions/upcoming' },
@@ -71,6 +77,8 @@ export const ms = {
         {
           title: 'Libat Sama',
           path: '/engage',
+          icon:'/images/icons/engage.png',
+          icontoggle:'/images/icons/engage_w.png',
           items: [
             { title: 'Program', path: '/engage/programs' },
             { title: 'Keahlian', path: '/engage/membership' },
@@ -81,6 +89,8 @@ export const ms = {
         {
           title: 'Penyelidikan',
           path: '/research',
+          icon:'/images/icons/research.png',
+          icontoggle:'/images/icons/research_w.png',
           items: [
             { title: 'Penerbitan', path: '/research/publications' },
             { title: 'Arkib', path: '/research/archive' },
@@ -93,6 +103,8 @@ export const ms = {
         {
           title: 'Perkhidmatan',
           path: '/services',
+          icon:'/images/icons/services.png',
+          icontoggle:'/images/icons/services_w.png',
           items: [
             { title: 'Permohonan', path: '/services/applications' },
             { title: 'Pangkalan Data Artis', path: '/services/artist-database' },
@@ -103,6 +115,8 @@ export const ms = {
         {
           title: 'Media',
           path: '/media',
+          icon:'/images/icons/media.png',
+          icontoggle:'/images/icons/media_w.png',
           items: [
             { title: 'Siaran Akhbar', path: '/media/press' },
             { title: 'Pengumuman', path: '/media/announcements' },
@@ -113,6 +127,8 @@ export const ms = {
         {
           title: 'Perundangan',
           path: '/legal',
+          icon:'/images/icons/legal.png',
+          icontoggle:'/images/icons/legal_w.png',
           items: [
             { title: 'Dasar Privasi', path: '/legal/privacy' },
             { title: 'Keselamatan', path: '/legal/security' },

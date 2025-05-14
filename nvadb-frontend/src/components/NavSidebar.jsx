@@ -67,7 +67,14 @@ const NavSidebar = ({ isOpen, toggleSidebar }) => {
                         : 'hover:bg-gray-100'
                     }`}
                   >
-                    {section.title}
+                    <div className="flex items-center gap-2">
+                      <img 
+                        src={location.pathname.startsWith(section.path) ? section.icontoggle : section.icon} 
+                        alt="" 
+                        className="w-6 h-6" 
+                      />
+                      {section.title}
+                    </div>
                     {subItems.length > 0 && (
                       <ChevronDownIcon className={`h-4 w-4 transition-transform ${
                         openMenus[section.path] ? 'rotate-180' : ''
