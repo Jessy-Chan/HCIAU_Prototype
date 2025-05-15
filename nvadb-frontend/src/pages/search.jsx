@@ -38,24 +38,40 @@ const Search = () => {
           placeholder={content.metadata?.searchPlaceholder || 'Search...'}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full p-3 rounded-lg border border-gray-300 mb-6 focus:outline-none focus:ring-2 focus:ring-primary"
+          className="text-gray-200 w-full p-3 rounded-lg border border-gray-300 mb-6 focus:outline-none focus:ring-2 focus:ring-primary"
         />
 
         <div className="space-y-4">
-          {filteredPages.map((page, index) => (
-            <Link
-              key={`${page.path}-${index}`}
-              to={page.path}
-              className="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow"
-            >
-              <h3 className="font-medium text-gray-900">{page.title}</h3>
-              {page.parent && (
-                <p className="text-sm text-gray-500 mt-1">
-                  {page.parent}
-                </p>
-              )}
-            </Link>
-          ))}
+          {filteredPages.map((page, index) => {
+            const isParentPath = (page.path.match(/\//g) || []).length === 1;
+            
+            return isParentPath ? (
+              <div
+                key={`${page.path}-${index}`}
+                className="block p-4 bg-white rounded-lg shadow"
+              >
+                <h3 className="font-large text-primary">{page.title}</h3>
+                {page.parent && (
+                  <p className="text-sm text-primary mt-1">
+                    {page.parent}
+                  </p>
+                )}
+              </div>
+            ) : (
+              <Link
+                key={`${page.path}-${index}`}
+                to={page.path}
+                className="block p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow"
+              >
+                <h3 className="font-medium text-gray-900">{page.title}</h3>
+                {page.parent && (
+                  <p className="text-sm text-gray-500 mt-1">
+                    {page.parent}
+                  </p>
+                )}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </PageTemplate>

@@ -88,8 +88,8 @@ export const exhibitions = {
   photogallery: {
     title: "Photo Gallery",
     closetext: "Close",
-    previoustext: "Previous",
-    nexttext: "Next",
+    previoustext: "<",
+    nexttext: ">",
     images: [
       {
         id: "img001",

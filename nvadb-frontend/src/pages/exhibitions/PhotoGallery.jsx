@@ -78,7 +78,7 @@ const PhotoGallery = () => {
               {selectedImage.full.length > 1 && currentImageIndex > 0 && (
                 <button
                   onClick={handlePrevious}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300"
+                  className="absolute w-8 h-8 rounded-full left-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-black bg-white/70 flex items-center justify-center"
                 >
                   {photogallery.previoustext}
                 </button>
@@ -93,7 +93,7 @@ const PhotoGallery = () => {
               {selectedImage.full.length > 1 && currentImageIndex < selectedImage.full.length - 1 && (
                 <button
                   onClick={handleNext}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300"
+                  className="absolute w-8 h-8 rounded-full right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-black bg-white/70 flex items-center justify-center "
                 >
                   {photogallery.nexttext}
                 </button>

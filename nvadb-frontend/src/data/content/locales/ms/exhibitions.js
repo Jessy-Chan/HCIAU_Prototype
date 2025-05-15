@@ -93,8 +93,8 @@ export const exhibitions = {
     title: "Galeri Foto",
     pagetitle: "Galeri Foto",
     closetext: "Tutup",
-    previoustext: "Sebelumnya",
-    nexttext: "Seterusnya",
+    previoustext: "<",
+    nexttext: ">",
     images: [
       {
         id: "img001",
