@@ -81,7 +81,9 @@ const FormEmbed = ({ title, fields, onSubmit, locale }) => {
             setValidationMessage('');
           }}
         />
-        <label className="text-red-500 text-sm mt-1">{validationMessage}</label>
+        <label className="text-red-500 text-sm mt-1">
+          {validationMessage}
+        </label>
       </div>
     );
   };
@@ -93,6 +95,9 @@ const FormEmbed = ({ title, fields, onSubmit, locale }) => {
         <div key={field.id} className="form-field">
           <label className="block text-sm font-medium mb-1">
             {field.label}
+            {(field.required !== undefined ? field.required : true) && 
+              <span className="text-red-500"> *</span>
+            }
           </label>
           {renderInput(field)}
         </div>

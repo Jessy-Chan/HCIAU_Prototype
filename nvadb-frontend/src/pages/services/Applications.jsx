@@ -40,17 +40,19 @@ const Applications = () => {
             <div className="bg-white rounded-lg p-6 max-w-2xl w-full">
               <FormEmbed
                 title={`${applications.form.title} ${selectedCategory.title}`}
-                fields={[
-                  { id: 'name', label: applications.form.name, type: 'text'},
-                  { id: 'email', label: applications.form.email, type: 'email'},
-                  { id: 'documents', label: applications.form.documents, type: 'file', multiple: true}
-                ]}
+                fields={Object.values(selectedCategory.form).map(field => ({
+                  id: field.id,
+                  label: field.name,
+                  type: field.type,
+                  multiple: field.multiple !== undefined ? field.multiple : false,
+                  required: field.required !== undefined ? field.required : true  // Add this line
+                }))}
                 onSubmit={() => setSelectedCategory(null)}
                 locale={locale}
               />
               <button
                 onClick={() => setSelectedCategory(null)}
-                className="mt-4 text-gray-600"
+                className="mt-2 btn-primary bg-red-500 hover:bg-red-600"
               >
                 {applications.form.cancel}
               </button>

@@ -5,9 +5,6 @@ export const services = {
     applytext: "Mohon Sekarang",
     form: {
       title: "Mohon untuk",
-      name: "Nama Penuh",
-      email: "Emel",
-      documents: "Dokumen yang Diperlukan",
       cancel: "Batal"
     },
     categories: [
@@ -15,13 +12,34 @@ export const services = {
         id: "venue",
         title: "Tempahan Ruang",
         description: "Tempah ruang galeri untuk acara",
-        requirements: ["Cadangan acara", "Sijil insurans"]
+        requirements: ["Cadangan acara", "Sijil insurans"],
+        form: {
+          name: {id:'name', name: 'Nama Penuh', type: 'text'},
+          email: {id:'email', name: 'Emel', type: 'email'},
+          documents: {id:'documents', name: 'Cadangan Acara', type: 'file', multiple: true}
+        },
       },
       {
         id: "exhibition",
         title: "Cadangan Pameran",
         description: "Hantar konsep pameran anda",
-        requirements: ["Portfolio", "CV", "Konsep pameran"]
+        requirements: ["Portfolio", "CV", "Konsep pameran"],
+        form: {
+          name: {id:'name', name: 'Nama Penuh', type: 'text'},
+          email: {id:'email', name: 'Emel', type: 'email'},
+          documents: {id:'documents', name: 'Dokumen Pameran', type: 'file', multiple: true}
+        },
+      },
+      {
+        id: "join",
+        title: "Sertai sebagai Artis",
+        description: "Jadi sebahagian daripada komuniti artis kami",
+        requirements: ["Hati yang penuh dengan seni!"],
+        form: {
+          name: {id:'name', name: 'Nama Penuh', type: 'text'},
+          reason: {id:'reason', name: 'Sebab Menyertai', type: 'text'},
+          email: {id:'email', name: 'Emel', type: 'email'}
+        },
       }
     ]
   },

@@ -5,9 +5,6 @@ export const services = {
     applytext: "Apply Now",
     form: {
       title: "Apply for",
-      name: "Full Name",
-      email: "Email",
-      documents: "Required Documents",
       cancel: "Cancel"
     },
     categories: [
@@ -15,13 +12,35 @@ export const services = {
         id: "venue",
         title: "Venue Booking",
         description: "Book gallery spaces for events",
-        requirements: ["Event proposal", "Insurance certificate"]
+        requirements: ["Event proposal", "Insurance certificate"],
+        form: {
+          name: {id:'name', name: 'Full Name', type: 'text'},
+          email: {id:'email', name: 'Email', type: 'email'},
+          purpose: {id:'purpose', name: 'Purpose', type: 'text', required: false},
+          documents: {id:'documents', name: 'Event proposal', type: 'file', multiple: true}
+        },
       },
       {
         id: "exhibition",
         title: "Exhibition Proposal",
         description: "Submit your exhibition concept",
-        requirements: ["Portfolio", "CV", "Exhibition concept"]
+        requirements: ["Portfolio", "CV", "Exhibition concept"],
+        form: {
+          name: {id:'name', name: 'Full Name', type: 'text'},
+          email: {id:'email', name: 'Email', type: 'email'},
+          documents: {id:'documents', name: 'Event proposal', type: 'file', multiple: true}
+        },
+      },
+      {
+        id: "join",
+        title: "Join as an Artist",
+        description: "Become a part of our artist community",
+        requirements: ["A heart with art!"],
+        form: {
+          name: {id:'name', name: 'Full Name', type: 'text'},
+          reason: {id:'reason', name: 'Reason for Joining', type: 'text'},
+          email: {id:'email', name: 'Email', type: 'email'}
+        },
       }
     ]
   },
