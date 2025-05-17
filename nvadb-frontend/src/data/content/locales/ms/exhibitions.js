@@ -10,7 +10,7 @@ export const exhibitions = {
         daterange: "1 Okt - 31 Dis 2023",
         description: "Menampilkan karya terkini daripada artis kontemporari utama Malaysia",
         featured: true,
-        image: "/images/exhibitions/contemporary-2023.jpg",
+        image: "/images/exhibitions/full/current.png",
         artists: ["Sarah Lee", "Ahmad Hassan", "Raj Kumar"]
       }
     ]
@@ -83,7 +83,8 @@ export const exhibitions = {
           {
             id: "book001",
             title: "Seni Malaysia: Era Baharu",
-            price: "RM 120"
+            price: "RM 120",
+            image: "/images/exhibitions/full/book.png",
           }
         ]
       }

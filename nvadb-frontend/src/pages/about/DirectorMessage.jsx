@@ -15,10 +15,19 @@ const DirectorMessage = () => {
           </div>
         </div>
         
-        <div className="mt-8 pt-6 border-t border-gray-200">
-          <h3 className="font-semibold">{directorMessage.director.name}</h3>
-          <p className="text-gray-600">{directorMessage.director.title}</p>
-          <p className="text-sm text-gray-500">{directorMessage.director.period}</p>
+        <div className="mt-8 pt-6 border-t border-gray-200 flex justify-between items-start gap-6">
+          <div className="w-[30%]">
+            <img 
+              src={directorMessage.director.image} 
+              alt={directorMessage.director.name}
+              className="w-full rounded-lg object-cover"
+            />
+          </div>
+          <div className="flex-1">
+            <h3 className="font-semibold">{directorMessage.director.name}</h3>
+            <p className="text-gray-600">{directorMessage.director.title}</p>
+            <p className="text-sm text-gray-500">{directorMessage.director.period}</p>
+          </div>
         </div>
       </div>
     </PageTemplate>

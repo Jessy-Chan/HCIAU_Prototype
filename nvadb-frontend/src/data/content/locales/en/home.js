@@ -15,7 +15,7 @@ export const home = {
       {
         id: "ex2023001",
         title: "Contemporary Malaysian Art Now",
-        image: "/images/exhibitions/thumbnails/featured-1.jpg",
+        image: "/images/exhibitions/full/current.png",
         date: "Current Exhibition"
       }
     ],

@@ -38,12 +38,13 @@ export const about = {
       name: "Dr. Ahmad bin Abdullah",
       title: "Ketua Pengarah",
       period: "2020-sekarang",
-      image: "/images/director.jpg"
+      image: "/images/staff/director.jpg"
     }
   },
 
   orgChart: {
     description: "Struktur organisasi kami direka untuk menyokong misi kami dengan berkesan",
+    image: "/images/staff/org-chart.jpg",
     departments: [
       {
         name: "Kuratorial",

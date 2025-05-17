@@ -38,12 +38,13 @@ export const about = {
       name: "Dr. Ahmad bin Abdullah",
       title: "Director General",
       period: "2020-present",
-      image: "/images/director.jpg"
+      image: "/images/staff/director.jpg"
     }
   },
 
   orgChart: {
     description: "Our organizational structure is designed to support our mission effectively",
+    image: "/images/staff/org_chart.jpg",
     departments: [
       {
         name: "Curatorial",

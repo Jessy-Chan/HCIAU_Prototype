@@ -10,7 +10,7 @@ export const exhibitions = {
         daterange: "1 Oct - 31 Dec 2023",
         description: "Showcasing the latest works from Malaysia's leading contemporary artists",
         featured: true,
-        image: "/images/exhibitions/contemporary-2023.jpg",
+        image: "/images/exhibitions/full/current.png",
         artists: ["Sarah Lee", "Ahmad Hassan", "Raj Kumar"]
       }
     ]
@@ -79,7 +79,8 @@ export const exhibitions = {
           {
             id: "book001",
             title: "Malaysian Art: A New Era",
-            price: "RM 120"
+            price: "RM 120",
+            image: "/images/exhibitions/full/book.png",
           }
         ]
       }

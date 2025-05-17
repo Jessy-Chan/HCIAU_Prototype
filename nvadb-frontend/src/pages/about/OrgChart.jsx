@@ -15,7 +15,7 @@ const OrgChart = () => {
           <picture>
             <source srcSet="/images/org-chart-mobile.svg" media="(max-width: 768px)" />
             <img 
-              src="/images/org-chart.svg" 
+              src={orgChart.image} 
               alt="NVADB Organization Structure"
               className="w-full"
             />
