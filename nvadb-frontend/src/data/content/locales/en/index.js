@@ -137,7 +137,7 @@ export const en = {
         },
       ],
       rights:
-        "© 2025 National Visual Arts Development Board. All rights reserved.",
+        "© 2025 Human Computer Interaction and Usability. All rights reserved.",
     },
     bottomNav: [
       { title: "Home", path: "/", icon: "/images/icons/home.png" },

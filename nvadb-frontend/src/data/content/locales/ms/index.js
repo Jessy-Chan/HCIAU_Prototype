@@ -141,7 +141,7 @@ export const ms = {
         },
       ],
       rights:
-        "Hak Cipta © 2025 Lembaga Pembangunan Seni Visual Kebangsaan. Semua hak terpelihara.",
+        "Hak Cipta © 2025 Interaksi dan Kebolehgunaan Komputer Manusia. Semua hak terpelihara.",
     },
     bottomNav: [
       { title: "Utama", path: "/", icon: "/images/icons/home.png" },
