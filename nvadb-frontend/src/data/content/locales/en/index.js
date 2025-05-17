@@ -108,7 +108,6 @@ export const en = {
             { title: "Applications", path: "/services/applications" },
             { title: "Artist Database", path: "/services/artist-database" },
             { title: "Feedback", path: "/services/feedback" },
-            { title: "Mobile Apps", path: "/services/mobile-apps" },
           ],
         },
         {
